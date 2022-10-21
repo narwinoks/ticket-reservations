@@ -1,0 +1,46 @@
+{
+    "sourceFile": "public/assets/js/data-table.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1666345094266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666345101561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,8 @@\n     //   search_input.removeClass('form-control-sm');\n     //   // LENGTH - Inline-Form control\n     //   var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');\n     //   length_sel.removeClass('form-control-sm');\n-    });\n+    // });\n   });\n \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666345113212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,12 @@\n       \"aLengthMenu\": [\n         [10, 30, 50, -1],\n         [10, 30, 50, \"All\"]\n       ],\n-      \"iDisplayLength\": 10,\n-      \"language\": {\n-        search: \"\"\n-      }\n+      // \"iDisplayLength\": 10,\n+      // \"language\": {\n+      //   search: \"\"\n+      // }\n     });\n     // $('#dataTableExample').each(function() {\n     //   var datatable = $(this);\n     //   // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n"
+                },
+                {
+                    "date": 1666345128399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,22 +6,22 @@\n       \"aLengthMenu\": [\n         [10, 30, 50, -1],\n         [10, 30, 50, \"All\"]\n       ],\n-      // \"iDisplayLength\": 10,\n-      // \"language\": {\n-      //   search: \"\"\n-      // }\n+      \"iDisplayLength\": 10,\n+      \"language\": {\n+        search: \"\"\n+      }\n     });\n-    // $('#dataTableExample').each(function() {\n-    //   var datatable = $(this);\n-    //   // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n-    //   var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');\n-    //   search_input.attr('placeholder', 'Search');\n-    //   search_input.removeClass('form-control-sm');\n-    //   // LENGTH - Inline-Form control\n-    //   var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');\n-    //   length_sel.removeClass('form-control-sm');\n-    // });\n+    $('#dataTableExample').each(function() {\n+      var datatable = $(this);\n+      // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n+      var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');\n+      search_input.attr('placeholder', 'Search');\n+      search_input.removeClass('form-control-sm');\n+      // LENGTH - Inline-Form control\n+      var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');\n+      length_sel.removeClass('form-control-sm');\n+    });\n   });\n \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666345264947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,17 +11,17 @@\n       \"language\": {\n         search: \"\"\n       }\n     });\n-    $('#dataTableExample').each(function() {\n-      var datatable = $(this);\n-      // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n-      var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');\n-      search_input.attr('placeholder', 'Search');\n-      search_input.removeClass('form-control-sm');\n-      // LENGTH - Inline-Form control\n-      var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');\n-      length_sel.removeClass('form-control-sm');\n-    });\n+    // $('#dataTableExample').each(function() {\n+    //   var datatable = $(this);\n+    //   // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n+    //   var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');\n+    //   search_input.attr('placeholder', 'Search');\n+    //   search_input.removeClass('form-control-sm');\n+    //   // LENGTH - Inline-Form control\n+    //   var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');\n+    //   length_sel.removeClass('form-control-sm');\n+    // });\n   });\n \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666345286659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,16 @@\n   'use strict';\n \n   $(function() {\n     $('#dataTableExample').DataTable({\n-      \"aLengthMenu\": [\n-        [10, 30, 50, -1],\n-        [10, 30, 50, \"All\"]\n-      ],\n-      \"iDisplayLength\": 10,\n-      \"language\": {\n-        search: \"\"\n-      }\n+      // \"aLengthMenu\": [\n+      //   [10, 30, 50, -1],\n+      //   [10, 30, 50, \"All\"]\n+      // ],\n+      // \"iDisplayLength\": 10,\n+      // \"language\": {\n+      //   search: \"\"\n+      // }\n     });\n     // $('#dataTableExample').each(function() {\n     //   var datatable = $(this);\n     //   // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n"
+                },
+                {
+                    "date": 1666346275816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,1 @@\n-$(function() {\n-  'use strict';\n-\n-  $(function() {\n-    $('#dataTableExample').DataTable({\n-      // \"aLengthMenu\": [\n-      //   [10, 30, 50, -1],\n-      //   [10, 30, 50, \"All\"]\n-      // ],\n-      // \"iDisplayLength\": 10,\n-      // \"language\": {\n-      //   search: \"\"\n-      // }\n-    });\n-    // $('#dataTableExample').each(function() {\n-    //   var datatable = $(this);\n-    //   // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n-    //   var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');\n-    //   search_input.attr('placeholder', 'Search');\n-    //   search_input.removeClass('form-control-sm');\n-    //   // LENGTH - Inline-Form control\n-    //   var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');\n-    //   length_sel.removeClass('form-control-sm');\n-    // });\n-  });\n-\n-});\n\\ No newline at end of file\n+z\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666346281542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,27 @@\n-z\n\\ No newline at end of file\n+$(function() {\n+  'use strict';\n+\n+  $(function() {\n+    $('#dataTables').DataTable({\n+      \"aLengthMenu\": [\n+        [10, 30, 50, -1],\n+        [10, 30, 50, \"All\"]\n+      ],\n+      \"iDisplayLength\": 10,\n+      \"language\": {\n+        search: \"\"\n+      }\n+    });\n+    $('#dataTableExample').each(function() {\n+      var datatable = $(this);\n+      // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n+      var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');\n+      search_input.attr('placeholder', 'Search');\n+      search_input.removeClass('form-control-sm');\n+      // LENGTH - Inline-Form control\n+      var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');\n+      length_sel.removeClass('form-control-sm');\n+    });\n+  });\n+\n+});\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1666345094266,
+            "name": "Commit-0",
+            "content": "$(function() {\n  'use strict';\n\n  $(function() {\n    $('#dataTableExample').DataTable({\n      \"aLengthMenu\": [\n        [10, 30, 50, -1],\n        [10, 30, 50, \"All\"]\n      ],\n      \"iDisplayLength\": 10,\n      \"language\": {\n        search: \"\"\n      }\n    });\n    // $('#dataTableExample').each(function() {\n    //   var datatable = $(this);\n    //   // SEARCH - Add the placeholder for Search and Turn this into in-line form control\n    //   var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');\n    //   search_input.attr('placeholder', 'Search');\n    //   search_input.removeClass('form-control-sm');\n    //   // LENGTH - Inline-Form control\n    //   var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');\n    //   length_sel.removeClass('form-control-sm');\n    });\n  });\n\n});"
+        }
+    ]
+}

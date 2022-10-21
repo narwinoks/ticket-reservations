@@ -1,0 +1,82 @@
+{
+    "sourceFile": "database/factories/TicketDataFactory.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1666348183044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666348416424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n      */\n     public function definition()\n     {\n         return [\n-          \n+            'ticket_id' =>rand(0,5)\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348426943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,10 @@\n      */\n     public function definition()\n     {\n         return [\n-            'ticket_id' =>rand(0,5)\n+            'ticket_id' =>rand(0,5),\n+            'code'\n+\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348448380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     public function definition()\n     {\n         return [\n             'ticket_id' =>rand(0,5),\n-            'code'\n+            'code'=>$this->faker->text()\n \n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348464128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n     public function definition()\n     {\n         return [\n             'ticket_id' =>rand(0,5),\n-            'code'=>$this->faker->text()\n+            'code'=>$this->faker->text(6)\n+            \n \n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348474852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     {\n         return [\n             'ticket_id' =>rand(0,5),\n             'code'=>$this->faker->text(6)\n-            \n+            'available'\n \n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348487193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     {\n         return [\n             'ticket_id' =>rand(0,5),\n             'code'=>$this->faker->text(6)\n-            'available'\n+            'available'=>rand()\n \n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348492701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n     public function definition()\n     {\n         return [\n             'ticket_id' =>rand(0,5),\n-            'code'=>$this->faker->text(6)\n-            'available'=>rand()\n+            'code'=>$this->faker->text(6),\n+            'available'=>rand(0,1)\n \n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348615349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     {\n         return [\n             'ticket_id' =>rand(0,5),\n             'code'=>$this->faker->text(6),\n-            'available'=>rand(0,1)\n+            // 'available'=>rand(0,1)\n \n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348634486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     public function definition()\n     {\n         return [\n             'ticket_id' =>rand(0,5),\n-            'code'=>$this->faker->text(6),\n+            'code'=>$this->faker->text(6)->unique,\n             // 'available'=>rand(0,1)\n \n         ];\n     }\n"
+                },
+                {
+                    "date": 1666348641831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     public function definition()\n     {\n         return [\n             'ticket_id' =>rand(0,5),\n-            'code'=>$this->faker->text(6)->unique,\n+            'code'=>$this->faker->text(6),\n             // 'available'=>rand(0,1)\n \n         ];\n     }\n"
+                },
+                {
+                    "date": 1666348671222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n      */\n     public function definition()\n     {\n         return [\n-            'ticket_id' =>rand(0,5),\n-            'code'=>$this->faker->text(6),\n+            'ticket_id' =>rand(1,5),\n+            'code'=>$this->faker->text(16),\n             // 'available'=>rand(0,1)\n \n         ];\n     }\n"
+                },
+                {
+                    "date": 1666355083724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n      */\n     public function definition()\n     {\n         return [\n-            'ticket_id' =>rand(1,5),\n+            'ticket_id' =>rand(1,4),\n             'code'=>$this->faker->text(16),\n             // 'available'=>rand(0,1)\n \n         ];\n"
+                },
+                {
+                    "date": 1666355547081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n      */\n     public function definition()\n     {\n         return [\n-            'ticket_id' =>rand(1,4),\n+            'ticket_id' =>rand(1,5),\n             'code'=>$this->faker->text(16),\n             // 'available'=>rand(0,1)\n \n         ];\n"
+                },
+                {
+                    "date": 1666355793383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n      */\n     public function definition()\n     {\n         return [\n-            'ticket_id' =>rand(1,5),\n+            'ticket_id' =>rand(1,4),\n             'code'=>$this->faker->text(16),\n             // 'available'=>rand(0,1)\n \n         ];\n"
+                },
+                {
+                    "date": 1666357323989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     {\n         return [\n             'ticket_id' =>rand(1,4),\n             'code'=>$this->faker->text(16),\n-            // 'available'=>rand(0,1)\n+            'available'=>rand(0,1)\n \n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666357450916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     {\n         return [\n             'ticket_id' =>rand(1,4),\n             'code'=>$this->faker->text(16),\n-            'available'=>rand(0,1)\n+            'available'=>1\n \n         ];\n     }\n }\n"
+                }
+            ],
+            "date": 1666348183044,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Database\\Factories;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\Factory;\n\n/**\n * @extends \\Illuminate\\Database\\Eloquent\\Factories\\Factory<\\App\\Models\\TicketData>\n */\nclass TicketDataFactory extends Factory\n{\n    /**\n     * Define the model's default state.\n     *\n     * @return array<string, mixed>\n     */\n    public function definition()\n    {\n        return [\n          \n        ];\n    }\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "sourceFile": "app/Models/Ticket.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1666341906973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666347894461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,9 @@\n \n class Ticket extends Model\n {\n     use HasFactory;\n+    protected $guarded = ['id'];\n+\n+    public function \n }\n \n"
+                },
+                {
+                    "date": 1666347900056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n {\n     use HasFactory;\n     protected $guarded = ['id'];\n \n-    public function \n+    public function Tiket\n }\n \n"
+                },
+                {
+                    "date": 1666347905604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,9 @@\n {\n     use HasFactory;\n     protected $guarded = ['id'];\n \n-    public function Tiket\n+    public function TiketData(){\n+        \n+    }\n }\n \n"
+                },
+                {
+                    "date": 1666347915953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        \n+        return $this->has\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666347921488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->has\n+        return $this->hasMany()\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666347928511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany()\n+        return $this->hasMany(TicketData::class)\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356398521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)\n+        return $this->hasMany(TicketData::class)->w;\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356419556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->w;\n+        return $this->hasMany(TicketData::class)->where('available');\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356436276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('available');\n+        return $this->hasMany(TicketData::class)->where('available' , 0);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356442096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('available' , 0);\n+        return $this->hasMany(TicketData::class)->where('available' ,);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356633048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('available' ,);\n+        return $this->hasMany(TicketData::class)->where('available'  1);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356638872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('available'  1);\n+        return $this->hasMany(TicketData::class)->where('available' , '', 1);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356759324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('available' , '', 1);\n+        return $this->hasMany(TicketData::class)->where('availableavailable' , '=', 1);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356787218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('availableavailable' , '=', 1);\n+        return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356872683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n+        return $this->=(TicketData::class)->where('available' , '=', 1);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356878684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->=(TicketData::class)->where('available' , '=', 1);\n+        return $this->(TicketData::class)->where('available' , '=', 1);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356939886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->(TicketData::class)->where('available' , '=', 1);\n+        return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356983162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,10 @@\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n+        whereHas('comments', function (Builder $query) {\n+            $query->where('content', 'like', 'code%');\n+        })->get();\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666356990679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n-        whereHas('comments', function (Builder $query) {\n+      return $this  whereHas('comments', function (Builder $query) {\n             $query->where('content', 'like', 'code%');\n         })->get();\n     }\n }\n"
+                },
+                {
+                    "date": 1666356999983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace App\\Models;\n \n+use Illuminate\\Contracts\\Database\\Eloquent\\Builder;\n use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\n use Illuminate\\Database\\Eloquent\\Model;\n \n class Ticket extends Model\n@@ -11,9 +12,9 @@\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n-      return $this  whereHas('comments', function (Builder $query) {\n+      return $this->whereHas('comments', function (Builder $query) {\n             $query->where('content', 'like', 'code%');\n         })->get();\n     }\n }\n"
+                },
+                {
+                    "date": 1666357005996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n <?php\n \n namespace App\\Models;\n \n-use Illuminate\\Contracts\\Database\\Eloquent\\Builder;\n use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\n use Illuminate\\Database\\Eloquent\\Model;\n \n class Ticket extends Model\n"
+                },
+                {
+                    "date": 1666357018460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n namespace App\\Models;\n \n use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\n use Illuminate\\Database\\Eloquent\\Model;\n+use Illuminate\\Database\\Eloquent\\Builder;\n \n+\n class Ticket extends Model\n {\n     use HasFactory;\n     protected $guarded = ['id'];\n"
+                },
+                {
+                    "date": 1666357041204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n+        return $this->hasMany(ticket_data::class)->where('available' , '=', 1);\n       return $this->whereHas('comments', function (Builder $query) {\n             $query->where('content', 'like', 'code%');\n         })->get();\n     }\n"
+                },
+                {
+                    "date": 1666357047829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(ticket_data::class)->where('available' , '=', 1);\n-      return $this->whereHas('comments', function (Builder $query) {\n+        return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n+      return $this->whereHas('ticket_data', function (Builder $query) {\n             $query->where('content', 'like', 'code%');\n         })->get();\n     }\n }\n"
+                },
+                {
+                    "date": 1666357057607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n       return $this->whereHas('ticket_data', function (Builder $query) {\n-            $query->where('content', 'like', 'code%');\n+            $query->where('avalible', 1);\n         })->get();\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666357105440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,7 @@\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n-      return $this->whereHas('ticket_data', function (Builder $query) {\n-            $query->where('avalible', 1);\n-        })->get();\n     }\n }\n \n"
+                }
+            ],
+            "date": 1666341906973,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Ticket extends Model\n{\n    use HasFactory;\n}\n\n"
+        }
+    ]
+}

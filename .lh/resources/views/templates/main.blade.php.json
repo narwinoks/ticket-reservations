@@ -1,0 +1,114 @@
+{
+    "sourceFile": "resources/views/templates/main.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1666341003406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666341018238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-sec\n\\ No newline at end of file\n+@include('templates.head')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341028602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-@include('templates.head')\n\\ No newline at end of file\n+@include('templates.head')\n+@include('templates.sedibar')\n+@include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341034431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n @include('templates.head')\n-@include('templates.sedibar')\n+@include('templates.seddibar')\n+@include('templates.seddibar')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341040527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n @include('templates.head')\n @include('templates.seddibar')\n-@include('templates.seddibar')\n+@include('templates.navbar')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341045903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n @include('templates.head')\n @include('templates.seddibar')\n @include('templates.navbar')\n+ye\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341148875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,14 @@\n @include('templates.head')\n @include('templates.seddibar')\n @include('templates.navbar')\n-ye\n+    \t<div class=\"page-content\">\n+\n+        <div class=\"d-flex justify-content-between align-items-center flex-wrap grid-margin\">\n+          <div>\n+            <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n+          </div>\n+        </div>\n+\n+        <div class=\"row\">\n+@yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341154764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,7 @@\n           <div>\n             <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n           </div>\n         </div>\n-\n-        <div class=\"row\">\n+            <div class=\"row\">\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341162944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n @include('templates.head')\n @include('templates.seddibar')\n @include('templates.navbar')\n-    \t<div class=\"page-content\">\n-\n+    <div class=\"page-content\">\n         <div class=\"d-flex justify-content-between align-items-center flex-wrap grid-margin\">\n           <div>\n             <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n           </div>\n         </div>\n             <div class=\"row\">\n-@yield('content')\n+            @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341186481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,5 @@\n @include('templates.head')\n @include('templates.seddibar')\n @include('templates.navbar')\n-    <div class=\"page-content\">\n-        <div class=\"d-flex justify-content-between align-items-center flex-wrap grid-margin\">\n-          <div>\n-            <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n-          </div>\n-        </div>\n-            <div class=\"row\">\n-            @yield('content')\n+@yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341207509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,14 @@\n @include('templates.head')\n @include('templates.seddibar')\n @include('templates.navbar')\n+    \t<div class=\"page-content\">\n+\n+        <div class=\"d-flex justify-content-between align-items-center flex-wrap grid-margin\">\n+          <div>\n+            <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n+          </div>\n+        </div>\n+\n+        <div class=\"row\">\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666341219814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,7 @@\n           <div>\n             <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n           </div>\n         </div>\n-\n         <div class=\"row\">\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666364855409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n @include('templates.head')\n @include('templates.seddibar')\n @include('templates.navbar')\n     \t<div class=\"page-content\">\n-\n         <div class=\"d-flex justify-content-between align-items-center flex-wrap grid-margin\">\n           <div>\n             <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n           </div>\n"
+                },
+                {
+                    "date": 1666364866766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,9 @@\n             <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n           </div>\n         </div>\n         <div class=\"row\">\n+          @if (session->)\n+              \n+          @endif\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666365031602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,12 @@\n             <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n           </div>\n         </div>\n         <div class=\"row\">\n-          @if (session->)\n-              \n-          @endif\n+           @if (session()->has('success'))\n+            <div class=\"alert alert-success\" role=\"alert\">\n+                {{ session('success') }}\n+            </div>\n+        @else\n+        @endif\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666365038674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n            @if (session()->has('success'))\n             <div class=\"alert alert-success\" role=\"alert\">\n                 {{ session('success') }}\n             </div>\n-        @else\n-        @endif\n+            @else\n+           @endif\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666365069812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,12 @@\n             <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n           </div>\n         </div>\n         <div class=\"row\">\n-           @if (session()->has('success'))\n-            <div class=\"alert alert-success\" role=\"alert\">\n-                {{ session('success') }}\n-            </div>\n+            @if (session()->has('success'))\n+            <div class=\"alert alert-fill-primary\" role=\"alert\">\n+\tA simple primary alert—check it out!\n+</div>\n             @else\n-           @endif\n+             @endif\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666365077247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         <div class=\"row\">\n             @if (session()->has('success'))\n             <div class=\"alert alert-fill-primary\" role=\"alert\">\n \tA simple primary alert—check it out!\n-</div>\n+             </div>\n             @else\n              @endif\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666365082434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n         </div>\n         <div class=\"row\">\n             @if (session()->has('success'))\n             <div class=\"alert alert-fill-primary\" role=\"alert\">\n-\tA simple primary alert—check it out!\n              </div>\n             @else\n              @endif\n @yield('content')\n"
+                },
+                {
+                    "date": 1666365089592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n         </div>\n         <div class=\"row\">\n             @if (session()->has('success'))\n             <div class=\"alert alert-fill-primary\" role=\"alert\">\n+              {{ session()\n              </div>\n             @else\n              @endif\n @yield('content')\n"
+                },
+                {
+                    "date": 1666365102099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         </div>\n         <div class=\"row\">\n             @if (session()->has('success'))\n             <div class=\"alert alert-fill-primary\" role=\"alert\">\n-              {{ session()\n+              {{ session('sucess')}}\n              </div>\n             @else\n              @endif\n @yield('content')\n"
+                },
+                {
+                    "date": 1666365107677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,11 @@\n             @if (session()->has('success'))\n             <div class=\"alert alert-fill-primary\" role=\"alert\">\n               {{ session('sucess')}}\n              </div>\n+            <div class=\"alert alert-fill-primary\" role=\"alert\">\n+              {{ session('sucess')}}\n+             </div>\n             @else\n              @endif\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666365113805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,11 @@\n              </div>\n             <div class=\"alert alert-fill-primary\" role=\"alert\">\n               {{ session('sucess')}}\n              </div>\n+            <div class=\"alert alert-fill-primary\" role=\"alert\">\n+              {{ session('sucess')}}\n+             </div>\n             @else\n              @endif\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666365119733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,11 @@\n             @if (session()->has('success'))\n             <div class=\"alert alert-fill-primary\" role=\"alert\">\n               {{ session('sucess')}}\n              </div>\n-            <div class=\"alert alert-fill-primary\" role=\"alert\">\n-              {{ session('sucess')}}\n-             </div>\n-            <div class=\"alert alert-fill-primary\" role=\"alert\">\n-              {{ session('sucess')}}\n-             </div>\n-            @else\n+             @else\n+             <div class=\"alert alert-fill-primary\" role=\"alert\">\n+               {{ session('danger')}}\n+              </div>\n              @endif\n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666365482322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,7 @@\n             <h4 class=\"mb-3 mb-md-0\">Welcome to Dashboard</h4>\n           </div>\n         </div>\n         <div class=\"row\">\n-            @if (session()->has('success'))\n-            <div class=\"alert alert-fill-primary\" role=\"alert\">\n-              {{ session('sucess')}}\n-             </div>\n-             @else\n-             <div class=\"alert alert-fill-primary\" role=\"alert\">\n-               {{ session('danger')}}\n-              </div>\n-             @endif\n+          \n @yield('content')\n @include('templates.footer')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1666341003406,
+            "name": "Commit-0",
+            "content": "sec"
+        }
+    ]
+}

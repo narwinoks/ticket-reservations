@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1666335556218,
@@ -44,6 +44,14 @@
                 {
                     "date": 1666335867199,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,10 +77,10 @@\n \t<!-- endinject -->\n   <!-- plugin js for this page -->\n \t<!-- end plugin js for this page -->\n \t<!-- inject:js -->\n+\t<script src=\"{{ asset('assets/vendors/feather-icons/feather.min.js') }}\"></script>\n \t<script src=\"{{ asset('') }}\"></script>\n-\t<script src=\"{{ asset('') }}assets/js/template.js\"></script>\n \t<!-- endinject -->\n   <!-- custom js for this page -->\n \t<!-- end custom js for this page -->\n </body>\n"
+                },
+                {
+                    "date": 1666337230905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n                           Remember me\n                         </label>\n                       </div>\n                       <div class=\"mt-3\">\n-                        <a href=\"../../dashboard-one.html\" class=\"btn btn-primary mr-2 mb-2 mb-md-0 text-white\">Login</a>\n+                        <button class=\"btn btn-primary mr-2 mb-2 mb-md-0 text-white\">Login</a>\n                         <button type=\"button\" class=\"btn btn-outline-primary btn-icon-text mb-2 mb-md-0\">\n                           <i class=\"btn-icon-prepend\" data-feather=\"twitter\"></i>\n                           Login with twitter\n                         </button>\n@@ -78,9 +78,9 @@\n   <!-- plugin js for this page -->\n \t<!-- end plugin js for this page -->\n \t<!-- inject:js -->\n \t<script src=\"{{ asset('assets/vendors/feather-icons/feather.min.js') }}\"></script>\n-\t<script src=\"{{ asset('') }}\"></script>\n+\t<script src=\"{{ asset('assets/js/template.js') }}\"></script>\n \t<!-- endinject -->\n   <!-- custom js for this page -->\n \t<!-- end custom js for this page -->\n </body>\n"
+                },
+                {
+                    "date": 1666337240957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n                           Remember me\n                         </label>\n                       </div>\n                       <div class=\"mt-3\">\n-                        <button  ty class=\"btn btn-primary mr-2 mb-2 mb-md-0 text-white\">Login</button>\n+                        <button  typ class=\"btn btn-primary mr-2 mb-2 mb-md-0 text-white\">Login</button>\n                         <button type=\"button\" class=\"btn btn-outline-primary btn-icon-text mb-2 mb-md-0\">\n                           <i class=\"btn-icon-prepend\" data-feather=\"twitter\"></i>\n                           Login with twitter\n                         </button>\n"
                 }
             ],
             "date": 1666335556218,

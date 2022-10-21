@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/Models/TicketData.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1666341872104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666341879943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n \n class TicketData extends Model\n {\n     use HasFactory;\n-    pro\n+    protected $\n }\n"
+                },
+                {
+                    "date": 1666341896828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n \n class TicketData extends Model\n {\n     use HasFactory;\n-    protected $\n+    protected $guarded\n }\n"
+                },
+                {
+                    "date": 1666347940551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,8 @@\n \n class TicketData extends Model\n {\n     use HasFactory;\n-    protected $guarded\n+    protected $guarded=['id'];\n+\n+    public fun\n }\n"
+                },
+                {
+                    "date": 1666347947662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n {\n     use HasFactory;\n     protected $guarded=['id'];\n \n-    public function Tikect\n+    public function Tikect()\n }\n"
+                }
+            ],
+            "date": 1666341872104,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass TicketData extends Model\n{\n    use HasFactory;\n    pro\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "resources/views/templates/script.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1666368477604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1666368477604,
+            "name": "Commit-0",
+            "content": " <script>\n     $('button#delete').on('click', function(e) {\n         e.preventDefault();\n         var form = event.target.form;\n         var href = $(this).attr('href');\n         Swal.fire({\n             title: 'Apakah kamu yakin hapus data ini?',\n             text: \"Daya yang sudah dihapus tidak bisa dikembalikan!\",\n             icon: 'warning',\n             showCancelButton: true,\n             confirmButtonColor: '#3085d6',\n             cancelButtonColor: '#d33',\n             confirmButtonText: 'Ya, hapus data!'\n         }).then((result) => {\n             if (result.isConfirmed) {\n                 form.submit();\n                 Swal.fire(\n                     'Deleted!',\n                     'Your file has been deleted.',\n                     'success'\n                 )\n             } else if (\n                 /* Read more about handling dismissals below */\n                 result.dismiss === Swal.DismissReason.cancel\n             ) {\n                 Swal.fire(\n                     'Cancelled',\n                     'Your imaginary file is safe :)',\n                     'error'\n                 )\n             }\n         });\n     });\n </script>"
+        }
+    ]
+}

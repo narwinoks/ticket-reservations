@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1666335884106,
@@ -24,6 +24,50 @@
                 {
                     "date": 1666336404214,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n \n class AuthController extends Controller\n {\n     public function login(){\n-        return view('auth.login';)\n+        return view('auth.login');\n     }\n+    \n }\n"
+                },
+                {
+                    "date": 1666336666234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,8 @@\n {\n     public function login(){\n         return view('auth.login');\n     }\n-    \n+\n+    private fun\n+\n }\n"
+                },
+                {
+                    "date": 1666336675506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,9 @@\n     public function login(){\n         return view('auth.login');\n     }\n \n-    private fun\n+    private function proscessLogin(){\n+        \n+    }\n \n }\n"
+                },
+                {
+                    "date": 1666336905978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,16 @@\n         return view('auth.login');\n     }\n \n     private function proscessLogin(){\n-        \n+        $credentials = $request->validate([\n+            'email' => ['required', 'email'],\n+            'password' => ['required'],\n+        ]);\n+        if (Auth::attempt($credentials)) {\n+            $request->session()->regenerate();\n+            return redirect()->intended('/dashboard');\n+        }\n+\n+        return back()->with('login erorr', 'Login Faild!');\n     }\n-\n }\n"
+                },
+                {
+                    "date": 1666336915198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     public function login(){\n         return view('auth.login');\n     }\n \n-    private function proscessLogin(){\n+    private function proscessLogin(Request  $request){\n         $credentials = $request->validate([\n             'email' => ['required', 'email'],\n             'password' => ['required'],\n         ]);\n"
+                },
+                {
+                    "date": 1666336921487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n namespace App\\Http\\Controllers;\n \n use Illuminate\\Http\\Request;\n+use Illuminate\\Support\\Facades\\Auth;\n \n class AuthController extends Controller\n {\n     public function login(){\n"
+                },
+                {
+                    "date": 1666336999295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,8 @@\n             'email' => ['required', 'email'],\n             'password' => ['required'],\n         ]);\n         if (Auth::attempt($credentials)) {\n-            $request->session()->regenerate();\n             return redirect()->intended('/dashboard');\n         }\n \n         return back()->with('login erorr', 'Login Faild!');\n"
+                },
+                {
+                    "date": 1666337123394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,14 +10,15 @@\n     public function login(){\n         return view('auth.login');\n     }\n \n-    private function proscessLogin(Request  $request){\n+    public function proscessLogin(Request  $request){\n         $credentials = $request->validate([\n             'email' => ['required', 'email'],\n             'password' => ['required'],\n         ]);\n         if (Auth::attempt($credentials)) {\n+            // $request->session()->regenerate();\n             return redirect()->intended('/dashboard');\n         }\n \n         return back()->with('login erorr', 'Login Faild!');\n"
+                },
+                {
+                    "date": 1666337892769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     }\n \n     public function proscessLogin(Request  $request){\n         $credentials = $request->validate([\n-            'email' => ['required', 'email'],\n+            '' => ['required', 'email'],\n             'password' => ['required'],\n         ]);\n         if (Auth::attempt($credentials)) {\n             // $request->session()->regenerate();\n"
+                },
+                {
+                    "date": 1666337899278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     }\n \n     public function proscessLogin(Request  $request){\n         $credentials = $request->validate([\n-            '' => ['required', 'email'],\n+            'username' => ['required', '],\n             'password' => ['required'],\n         ]);\n         if (Auth::attempt($credentials)) {\n             // $request->session()->regenerate();\n"
+                },
+                {
+                    "date": 1666338283111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,14 +12,14 @@\n     }\n \n     public function proscessLogin(Request  $request){\n         $credentials = $request->validate([\n-            'username' => ['required', '],\n+            'username' => ['required'],\n             'password' => ['required'],\n         ]);\n         if (Auth::attempt($credentials)) {\n             // $request->session()->regenerate();\n-            return redirect()->intended('/dashboard');\n+            return redirect()->intended('/home');\n         }\n \n         return back()->with('login erorr', 'Login Faild!');\n     }\n"
+                },
+                {
+                    "date": 1666339858184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,7 @@\n         if (Auth::attempt($credentials)) {\n             // $request->session()->regenerate();\n             return redirect()->intended('/home');\n         }\n-\n         return back()->with('login erorr', 'Login Faild!');\n     }\n }\n"
                 }
             ],
             "date": 1666335884106,

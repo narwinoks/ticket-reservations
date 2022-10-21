@@ -1,0 +1,86 @@
+{
+    "sourceFile": "database/migrations/2022_10_21_084408_create_ticket_data_table.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1666341924151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666341931234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            \n+            $table->fo\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341937727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            $table->fo\n+            $table->foreignId(t)\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341943540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Models\\Ticket;\n use Illuminate\\Database\\Migrations\\Migration;\n use Illuminate\\Database\\Schema\\Blueprint;\n use Illuminate\\Support\\Facades\\Schema;\n \n@@ -14,9 +15,9 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            $table->foreignId(t)\n+            $table->foreignId(Ticket::class)\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341949017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            $table->foreignId(Ticket::class)\n+            $table->foreignId(Ticket::class);\n+            \n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341955515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n             $table->foreignId(Ticket::class);\n-            \n+            $table->string('code')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341966682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n             $table->foreignId(Ticket::class);\n-            $table->string('code')\n+            $table->string('code')->unique();\n+            $table->String('name')->unique();\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341973033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n             $table->foreignId(Ticket::class);\n             $table->string('code')->unique();\n-            $table->String('name')->unique();\n+            $table->String('available';\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341979284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n             $table->foreignId(Ticket::class);\n             $table->string('code')->unique();\n-            $table->String('available';\n+            $table->en('available');\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341987388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n             $table->foreignId(Ticket::class);\n             $table->string('code')->unique();\n-            $table->en('available');\n+            $table->enum('available',);\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666341995753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n             $table->foreignId(Ticket::class);\n             $table->string('code')->unique();\n-            $table->enum('available',);\n+            $table->enum('available',[0,1])->default(0);\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666348274058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            $table->foreignId(Ticket::class);\n+            $table->foreignId(Ticket::class,'');\n             $table->string('code')->unique();\n             $table->enum('available',[0,1])->default(0);\n             $table->timestamps();\n         });\n"
+                },
+                {
+                    "date": 1666348279671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            $table->foreignId(Ticket::class,'');\n+            $table->foreignId(Ticket::class,'tice');\n             $table->string('code')->unique();\n             $table->enum('available',[0,1])->default(0);\n             $table->timestamps();\n         });\n"
+                },
+                {
+                    "date": 1666348292539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            $table->foreignId(Ticket::class,'tice');\n+            $table->foreignId(Ticket::class,'ticket_id');\n             $table->string('code')->unique();\n             $table->enum('available',[0,1])->default(0);\n             $table->timestamps();\n         });\n"
+                },
+                {
+                    "date": 1666348377434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            $table->foreignId(Ticket::class,'ticket_id');\n+            $table->fore(Ticket::class,'ticket_id');\n             $table->string('code')->unique();\n             $table->enum('available',[0,1])->default(0);\n             $table->timestamps();\n         });\n"
+                },
+                {
+                    "date": 1666348384324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public function up()\n     {\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n-            $table->fore(Ticket::class,'ticket_id');\n+            $table->foreignIdFor(Ticket::class);\n             $table->string('code')->unique();\n             $table->enum('available',[0,1])->default(0);\n             $table->timestamps();\n         });\n"
+                },
+                {
+                    "date": 1666357466865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n             $table->foreignIdFor(Ticket::class);\n             $table->string('code')->unique();\n-            $table->enum('available',[0,1])->default(0);\n+            $table->enum('available');\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666357472487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         Schema::create('ticket_data', function (Blueprint $table) {\n             $table->id();\n             $table->foreignIdFor(Ticket::class);\n             $table->string('code')->unique();\n-            $table->enum('available');\n+            $table->integer('available');\n             $table->timestamps();\n         });\n     }\n \n"
+                }
+            ],
+            "date": 1666341924151,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Database\\Migrations\\Migration;\nuse Illuminate\\Database\\Schema\\Blueprint;\nuse Illuminate\\Support\\Facades\\Schema;\n\nreturn new class extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return void\n     */\n    public function up()\n    {\n        Schema::create('ticket_data', function (Blueprint $table) {\n            $table->id();\n            \n            $table->timestamps();\n        });\n    }\n\n    /**\n     * Reverse the migrations.\n     *\n     * @return void\n     */\n    public function down()\n    {\n        Schema::dropIfExists('ticket_data');\n    }\n};\n"
+        }
+    ]
+}

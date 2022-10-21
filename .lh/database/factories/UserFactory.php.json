@@ -1,0 +1,30 @@
+{
+    "sourceFile": "database/factories/UserFactory.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1666338161483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666338205509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n     {\n         return [\n             'name' => fake()->name(),\n             'email' => 'admin@gmail.com',\n-            'email_verified_at' => now(),\n             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password\n             'remember_token' => Str::random(10),\n         ];\n     }\n"
+                },
+                {
+                    "date": 1666339624786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     public function definition()\n     {\n         return [\n             'name' => fake()->name(),\n-            'email' => 'admin@gmail.com',\n+            'username' => 'admin@gmail.com',\n             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password\n             'remember_token' => Str::random(10),\n         ];\n     }\n"
+                },
+                {
+                    "date": 1666339634966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     public function definition()\n     {\n         return [\n             'name' => fake()->name(),\n-            'username' => 'admin@gmail.com',\n+            'username' => 'admin',\n             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password\n             'remember_token' => Str::random(10),\n         ];\n     }\n"
+                }
+            ],
+            "date": 1666338161483,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Database\\Factories;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\Factory;\nuse Illuminate\\Support\\Str;\n\n/**\n * @extends \\Illuminate\\Database\\Eloquent\\Factories\\Factory<\\App\\Models\\User>\n */\nclass UserFactory extends Factory\n{\n    /**\n     * Define the model's default state.\n     *\n     * @return array<string, mixed>\n     */\n    public function definition()\n    {\n        return [\n            'name' => fake()->name(),\n            'email' => 'admin@gmail.com',\n            'email_verified_at' => now(),\n            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password\n            'remember_token' => Str::random(10),\n        ];\n    }\n\n    /**\n     * Indicate that the model's email address should be unverified.\n     *\n     * @return static\n     */\n    public function unverified()\n    {\n        return $this->state(fn (array $attributes) => [\n            'email_verified_at' => null,\n        ]);\n    }\n}\n"
+        }
+    ]
+}

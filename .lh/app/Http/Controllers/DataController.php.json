@@ -1,0 +1,54 @@
+{
+    "sourceFile": "app/Http/Controllers/DataController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1666343107621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666343138658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,31 @@\n use Illuminate\\Http\\Request;\n \n class DataController extends Controller\n {\n-    public function tickets()\n+    public function tickets(){\n+        $data = [\n+            [\n+                'id' => 1,\n+                'name' => 'Java'\n+            ],\n+            [\n+                'id' => 2,\n+                'name' => 'PHP'\n+            ]\n+        ];\n+        //   print_r( '<pre>' .$data);\n+        // var_dump($data);\n+        $return = [];\n+        foreach ($data as $key => $value) {\n+            $action = '<a href=\"JavaScript \" class=\"btn btn-primary btn-sm mx-1\">Show</a>';\n+            $action2 = '<a href=\"JavaScript \" class=\"btn btn-danger btn-sm\">Delete</a>';\n+            $return[] = [\n+                'id' => $value['id'],\n+                'name' => $value['name'],\n+                'actions' => $action . $action2,\n+            ];\n+        }\n+        $response['data'] = $return;\n+        echo json_encode($response);\n+    }\n }\n"
+                },
+                {
+                    "date": 1666343145084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n             $action2 = '<a href=\"JavaScript \" class=\"btn btn-danger btn-sm\">Delete</a>';\n             $return[] = [\n                 'id' => $value['id'],\n                 'name' => $value['name'],\n+                ''\n                 'actions' => $action . $action2,\n             ];\n         }\n         $response['data'] = $return;\n"
+                },
+                {
+                    "date": 1666343247196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             $action2 = '<a href=\"JavaScript \" class=\"btn btn-danger btn-sm\">Delete</a>';\n             $return[] = [\n                 'id' => $value['id'],\n                 'name' => $value['name'],\n-                ''\n+                'avalible'\n                 'actions' => $action . $action2,\n             ];\n         }\n         $response['data'] = $return;\n"
+                },
+                {
+                    "date": 1666343260249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n             $action2 = '<a href=\"JavaScript \" class=\"btn btn-danger btn-sm\">Delete</a>';\n             $return[] = [\n                 'id' => $value['id'],\n                 'name' => $value['name'],\n-                'avalible'\n+                'avalible'=>'1',\n+                'description'\n                 'actions' => $action . $action2,\n             ];\n         }\n         $response['data'] = $return;\n"
+                },
+                {
+                    "date": 1666343266093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             $return[] = [\n                 'id' => $value['id'],\n                 'name' => $value['name'],\n                 'avalible'=>'1',\n-                'description'\n+                'description'=>'lorem ipsum dolor sit amet, consect'\n                 'actions' => $action . $action2,\n             ];\n         }\n         $response['data'] = $return;\n"
+                },
+                {
+                    "date": 1666343372440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,10 @@\n             $return[] = [\n                 'id' => $value['id'],\n                 'name' => $value['name'],\n                 'avalible'=>'1',\n-                'description'=>'lorem ipsum dolor sit amet, consect'\n-                'actions' => $action . $action2,\n+                'description'=>'lorem ipsum dolor sit amet, consect',\n+                'action' => $action . $action2,\n             ];\n         }\n         $response['data'] = $return;\n         echo json_encode($response);\n"
+                },
+                {
+                    "date": 1666347845967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n \n class DataController extends Controller\n {\n     public function tickets(){\n+\n+        \n         $data = [\n             [\n                 'id' => 1,\n                 'name' => 'Java'\n"
+                },
+                {
+                    "date": 1666347869592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n class DataController extends Controller\n {\n     public function tickets(){\n \n-        $data=Ticket\n+        $data=Ticket:\n         $data = [\n             [\n                 'id' => 1,\n                 'name' => 'Java'\n"
+                },
+                {
+                    "date": 1666354898674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $action2 = '<a href=\"JavaScript \" class=\"btn btn-danger btn-sm\">Delete</a>';\n             $return[] = [\n                 'id' => $value['id'],\n                 'name' => $value['name'],\n-                'avalible'=>isset(),\n+                'avalible'=>isset($),\n                 'description'=>'lorem ipsum dolor sit amet, consect',\n                 'action' => $action . $action2,\n             ];\n         }\n"
+                }
+            ],
+            "date": 1666343107621,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass DataController extends Controller\n{\n    public function tickets()\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "resources/views/templates/auth.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1666337358729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666337370956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,21 @@\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/css/demo_1/style.css') }}\">\n   <!-- End layout styles -->\n   <link rel=\"shortcut icon\" href=\"{{ asset('assets/images/favicon.png') }}\" />\n </head>\n-<body>\n\\ No newline at end of file\n+<body>\n+\n+\n+\n+    \t<!-- core:js -->\n+\t<script src=\"{{ asset('assets/vendors/core/core.js') }}\"></script>\n+\t<!-- endinject -->\n+  <!-- plugin js for this page -->\n+\t<!-- end plugin js for this page -->\n+\t<!-- inject:js -->\n+\t<script src=\"{{ asset('assets/vendors/feather-icons/feather.min.js') }}\"></script>\n+\t<script src=\"{{ asset('assets/js/template.js') }}\"></script>\n+\t<!-- endinject -->\n+  <!-- custom js for this page -->\n+\t<!-- end custom js for this page -->\n+</body>\n+</html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666337378497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,14 +23,14 @@\n \n \n \n     \t<!-- core:js -->\n-\t<script src=\"{{ asset('assets/vendors/core/core.js') }}\"></script>\n+<script src=\"{{ asset('assets/vendors/core/core.js') }}\"></script>\n \t<!-- endinject -->\n   <!-- plugin js for this page -->\n \t<!-- end plugin js for this page -->\n \t<!-- inject:js -->\n-\t<script src=\"{{ asset('assets/vendors/feather-icons/feather.min.js') }}\"></script>\n+<script src=\"{{ asset('assets/vendors/feather-icons/feather.min.js') }}\"></script>\n \t<script src=\"{{ asset('assets/js/template.js') }}\"></script>\n \t<!-- endinject -->\n   <!-- custom js for this page -->\n \t<!-- end custom js for this page -->\n"
+                },
+                {
+                    "date": 1666337387598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,17 +21,17 @@\n </head>\n <body>\n \n \n-\n+@yield('content')\n     \t<!-- core:js -->\n <script src=\"{{ asset('assets/vendors/core/core.js') }}\"></script>\n \t<!-- endinject -->\n   <!-- plugin js for this page -->\n \t<!-- end plugin js for this page -->\n \t<!-- inject:js -->\n <script src=\"{{ asset('assets/vendors/feather-icons/feather.min.js') }}\"></script>\n-\t<script src=\"{{ asset('assets/js/template.js') }}\"></script>\n+<script src=\"{{ asset('assets/js/template.js') }}\"></script>\n \t<!-- endinject -->\n   <!-- custom js for this page -->\n \t<!-- end custom js for this page -->\n </body>\n"
+                }
+            ],
+            "date": 1666337358729,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\t<title>NobleUI Responsive Bootstrap 4 Dashboard Template</title>\n\t<!-- core:css -->\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/core/core.css') }}\">\n\t<!-- endinject -->\n  <!-- plugin css for this page -->\n\t<!-- end plugin css for this page -->\n\t<!-- inject:css -->\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/fonts/feather-font/css/iconfont.css') }}\">\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}\">\n\t<!-- endinject -->\n  <!-- Layout styles -->  \n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/css/demo_1/style.css') }}\">\n  <!-- End layout styles -->\n  <link rel=\"shortcut icon\" href=\"{{ asset('assets/images/favicon.png') }}\" />\n</head>\n<body>"
+        }
+    ]
+}

@@ -1,0 +1,162 @@
+{
+    "sourceFile": "routes/web.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 36,
+            "patches": [
+                {
+                    "date": 1666337013291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666337068698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n Route::get('/', function () {\n     return view('welcome');\n });\n \n-Route::controller('users', 'UserController');\n+Route::controller('');\n"
+                },
+                {
+                    "date": 1666337074675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n Route::get('/', function () {\n     return view('welcome');\n });\n \n-Route::controller('');\n+Route::controller(Auth);\n"
+                },
+                {
+                    "date": 1666337079798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Http\\Controllers\\AuthController;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -16,5 +17,5 @@\n Route::get('/', function () {\n     return view('welcome');\n });\n \n-Route::controller(Auth);\n+Route::controller(AuthController::class);\n"
+                },
+                {
+                    "date": 1666337086857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n Route::get('/', function () {\n     return view('welcome');\n });\n \n-Route::controller(AuthController::class);\n+Route::controller(AuthController::class)->group(function    );\n"
+                },
+                {
+                    "date": 1666337094593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,7 @@\n Route::get('/', function () {\n     return view('welcome');\n });\n \n-Route::controller(AuthController::class)->group(function    );\n+Route::controller(AuthController::class)->group(function(){\n+\n+});\n"
+                },
+                {
+                    "date": 1666337100397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n     return view('welcome');\n });\n \n Route::controller(AuthController::class)->group(function(){\n-\n+    Route::get\n });\n"
+                },
+                {
+                    "date": 1666337106595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n     return view('welcome');\n });\n \n Route::controller(AuthController::class)->group(function(){\n-    Route::get\n+    Route::get('login','login')\n });\n"
+                },
+                {
+                    "date": 1666337111924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n     return view('welcome');\n });\n \n Route::controller(AuthController::class)->group(function(){\n-    Route::get('login','login')\n+    Route::get('login','login')->name('login');\n });\n"
+                },
+                {
+                    "date": 1666337127945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,6 @@\n });\n \n Route::controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n+    Route::get('login', 'proscessLogin')->name('login');\n });\n"
+                },
+                {
+                    "date": 1666337135992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,6 @@\n });\n \n Route::controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n-    Route::get('login', 'proscessLogin')->name('login');\n+    Route::pos('login', 'proscessLogin')->name('login');\n });\n"
+                },
+                {
+                    "date": 1666338247467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,7 @@\n });\n \n Route::controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n-    Route::pos('login', 'proscessLogin')->name('login');\n+    Route::post('login', 'proscessLogin')->name('login');\n });\n+Route::controller(AuthController::class)->group(function(){\n"
+                },
+                {
+                    "date": 1666338253341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,4 +22,6 @@\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n Route::controller(AuthController::class)->group(function(){\n+    \n+})\n"
+                },
+                {
+                    "date": 1666338259093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,6 @@\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n Route::controller(AuthController::class)->group(function(){\n-    \n-})\n+    Route::get('logout','logout')->name('logout');\n+});\n"
+                },
+                {
+                    "date": 1666338267387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,6 @@\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n Route::controller(AuthController::class)->group(function(){\n-    Route::get('logout','logout')->name('logout');\n+    Route::get('home','logout')->name('logout');\n });\n"
+                },
+                {
+                    "date": 1666338273475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Controllers\\AuthController;\n+use App\\Http\\Controllers\\HomeController;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -21,7 +22,7 @@\n Route::controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n-Route::controller(AuthController::class)->group(function(){\n-    Route::get('home','logout')->name('logout');\n+Route::controller(HomeController::class)->group(function(){\n+    Route::get('home','')->name('logout');\n });\n"
+                },
+                {
+                    "date": 1666342195231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,6 +23,6 @@\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n Route::controller(HomeController::class)->group(function(){\n-    Route::get('home','')->name('logout');\n+    Route::get('home','index')->name('home');\n });\n"
+                },
+                {
+                    "date": 1666342202122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,8 @@\n Route::controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n+Route:\n Route::controller(HomeController::class)->group(function(){\n     Route::get('home','index')->name('home');\n });\n"
+                },
+                {
+                    "date": 1666342207491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,8 @@\n Route::controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n-Route:\n+Route::prefix('admin')\n Route::controller(HomeController::class)->group(function(){\n     Route::get('home','index')->name('home');\n });\n"
+                },
+                {
+                    "date": 1666342213131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,8 @@\n Route::controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n-Route::prefix('admin')\n+Route::prefix('admin')->group(function)\n Route::controller(HomeController::class)->group(function(){\n     Route::get('home','index')->name('home');\n });\n"
+                },
+                {
+                    "date": 1666342221029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,10 @@\n Route::controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n-Route::prefix('admin')->group(function)\n-Route::controller(HomeController::class)->group(function(){\n-    Route::get('home','index')->name('home');\n+Route::prefix('admin')->group(function(){\n+    Route::controller(HomeController::class)->group(function(){\n+        Route::get('home','index')->name('home');\n+    });\n+    \n });\n"
+                },
+                {
+                    "date": 1666342226290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,6 +26,6 @@\n Route::prefix('admin')->group(function(){\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n-    \n+    Route::res\n });\n"
+                },
+                {
+                    "date": 1666342233321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,6 +26,6 @@\n Route::prefix('admin')->group(function(){\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n-    Route::res\n+    Route::resource('ticket')\n });\n"
+                },
+                {
+                    "date": 1666342239107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,6 +26,6 @@\n Route::prefix('admin')->group(function(){\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n-    Route::resource('ticket')\n+    Route::resource('ticket',Tic)\n });\n"
+                },
+                {
+                    "date": 1666342988983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n use App\\Http\\Controllers\\AuthController;\n use App\\Http\\Controllers\\HomeController;\n+use App\\Http\\Controllers\\TicketsController;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -26,6 +27,8 @@\n Route::prefix('admin')->group(function(){\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n-    Route::resource('ticket',Tic)\n+    Route::resource('ticket',TicketsController::class);\n });\n+\n+\n"
+                },
+                {
+                    "date": 1666342995362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n     });\n     Route::resource('ticket',TicketsController::class);\n });\n \n-\n+Route::pre\n"
+                },
+                {
+                    "date": 1666343004290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n     });\n     Route::resource('ticket',TicketsController::class);\n });\n \n-Route::pre\n+Route::prefix('data')->group(function()\n"
+                },
+                {
+                    "date": 1666343010988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,7 @@\n     });\n     Route::resource('ticket',TicketsController::class);\n });\n \n-Route::prefix('data')->group(function()\n+Route::prefix('data')->group(function(){\n+\n+});\n"
+                },
+                {
+                    "date": 1666343016699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,6 +31,6 @@\n     Route::resource('ticket',TicketsController::class);\n });\n \n Route::prefix('data')->group(function(){\n-\n+    Route::controller(\n });\n"
+                },
+                {
+                    "date": 1666343023151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Controllers\\AuthController;\n+use App\\Http\\Controllers\\DataController;\n use App\\Http\\Controllers\\HomeController;\n use App\\Http\\Controllers\\TicketsController;\n use Illuminate\\Support\\Facades\\Route;\n \n@@ -31,6 +32,6 @@\n     Route::resource('ticket',TicketsController::class);\n });\n \n Route::prefix('data')->group(function(){\n-    Route::controller(\n+    Route::controller(DataController::class\n });\n"
+                },
+                {
+                    "date": 1666343031290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,6 +32,8 @@\n     Route::resource('ticket',TicketsController::class);\n });\n \n Route::prefix('data')->group(function(){\n-    Route::controller(DataController::class\n+    Route::controller(DataController::class)->group(function(){\n+\n+    };\n });\n"
+                },
+                {
+                    "date": 1666343040554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n });\n \n Route::prefix('data')->group(function(){\n     Route::controller(DataController::class)->group(function(){\n-\n-    };\n+        Route::get('data','data')->name('data');\n+    });\n });\n"
+                },
+                {
+                    "date": 1666343046998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n });\n \n Route::prefix('data')->group(function(){\n     Route::controller(DataController::class)->group(function(){\n-        Route::get('data','data')->name('data');\n+        Route::get('data','data')->name('tic');\n     });\n });\n"
+                },
+                {
+                    "date": 1666343056275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n });\n \n Route::prefix('data')->group(function(){\n     Route::controller(DataController::class)->group(function(){\n-        Route::get('data','data')->name('tic');\n+        Route::get('tike','data')->name('ticket.data');\n     });\n });\n"
+                },
+                {
+                    "date": 1666343068287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n });\n \n Route::prefix('data')->group(function(){\n     Route::controller(DataController::class)->group(function(){\n-        Route::get('tike','data')->name('ticket.data');\n+        Route::get('ticke','data')->name('ticket.data');\n     });\n });\n"
+                },
+                {
+                    "date": 1666343073766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n });\n \n Route::prefix('data')->group(function(){\n     Route::controller(DataController::class)->group(function(){\n-        Route::get('ticke','data')->name('ticket.data');\n+        Route::get('ticket.','data')->name('ticket.data');\n     });\n });\n"
+                },
+                {
+                    "date": 1666343080339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n });\n \n Route::prefix('data')->group(function(){\n     Route::controller(DataController::class)->group(function(){\n-        Route::get('ticket.','data')->name('ticket.data');\n+        Route::get('ticket','\\')->name('ticket.data');\n     });\n });\n"
+                }
+            ],
+            "date": 1666337013291,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Support\\Facades\\Route;\n\n/*\n|--------------------------------------------------------------------------\n| Web Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register web routes for your application. These\n| routes are loaded by the RouteServiceProvider within a group which\n| contains the \"web\" middleware group. Now create something great!\n|\n*/\n\nRoute::get('/', function () {\n    return view('welcome');\n});\n\nRoute::controller('users', 'UserController');\n"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "sourceFile": "public/assets/js/simplemde.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1666360361329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666360367054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n $(function() {\n   'use strict';\n \n   /*simplemde editor*/\n-  if ($(\"#simpleMdeExample\").length) {\n+  if ($(\"#simpleMdeExample2\").length) {\n     var simplemde = new SimpleMDE({\n-      element: $(\"#simpleMdeExample\")[0]\n+      element: $(\"#simpleMdeExample2\")[0]\n     });\n   }\n \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666360374080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n $(function() {\n   'use strict';\n \n   /*simplemde editor*/\n-  if ($(\"#simpleMdeExample\").length) {\n+  if ($(\"#simpleMdeExample1\").length) {\n     var simplemde = new SimpleMDE({\n       element: $(\"#simpleMdeExample\")[0]\n     });\n   }\n"
+                },
+                {
+                    "date": 1666360389052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,9 @@\n \n   /*simplemde editor*/\n   if ($(\"#simpleMdeExample1\").length) {\n     var simplemde = new SimpleMDE({\n-      element: $(\"#simpleMdeExample\")[0]\n+      element: $(\"#simpleMdeExample1\")[0]\n     });\n   }\n \n });\n-$(function() {\n-  'use strict';\n-\n-  /*simplemde editor*/\n-  if ($(\"#simpleMdeExample2\").length) {\n-    var simplemde = new SimpleMDE({\n-      element: $(\"#simpleMdeExample2\")[0]\n-    });\n-  }\n-\n\\ No newline at end of file\n-});\n"
+                },
+                {
+                    "date": 1666360413734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n $(function() {\n   'use strict';\n \n   /*simplemde editor*/\n-  if ($(\"#simpleMdeExample1\").length) {\n+  if ($(\"#simpleMdeExample\").length) {\n     var simplemde = new SimpleMDE({\n       element: $(\"#simpleMdeExample1\")[0]\n     });\n   }\n"
+                }
+            ],
+            "date": 1666360361329,
+            "name": "Commit-0",
+            "content": "$(function() {\n  'use strict';\n\n  /*simplemde editor*/\n  if ($(\"#simpleMdeExample\").length) {\n    var simplemde = new SimpleMDE({\n      element: $(\"#simpleMdeExample\")[0]\n    });\n  }\n\n});\n$(function() {\n  'use strict';\n\n  /*simplemde editor*/\n  if ($(\"#simpleMdeExample\").length) {\n    var simplemde = new SimpleMDE({\n      element: $(\"#simpleMdeExample\")[0]\n    });\n  }\n\n});"
+        }
+    ]
+}

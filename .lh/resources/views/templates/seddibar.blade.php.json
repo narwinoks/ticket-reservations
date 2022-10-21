@@ -1,0 +1,18 @@
+{
+    "sourceFile": "resources/views/templates/seddibar.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1666340975369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1666340975369,
+            "name": "Commit-0",
+            "content": "\t\t<!-- partial:partials/_sidebar.html -->\n\t<nav class=\"sidebar\">\n      <div class=\"sidebar-header\">\n        <a href=\"#\" class=\"sidebar-brand\">\n          Noble<span>UI</span>\n        </a>\n        <div class=\"sidebar-toggler not-active\">\n          <span></span>\n          <span></span>\n          <span></span>\n        </div>\n      </div>\n      <div class=\"sidebar-body\">\n        <ul class=\"nav\">\n          <li class=\"nav-item nav-category\">Main</li>\n          <li class=\"nav-item\">\n            <a href=\"{{ route('home') }}\" class=\"nav-link\">\n              <i class=\"link-icon\" data-feather=\"box\"></i>\n              <span class=\"link-title\">Dashboard</span>\n            </a>\n          </li>\n          <li class=\"nav-item nav-category\">Master</li>\n          <li class=\"nav-item\">\n            <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n              <i class=\"link-icon\" data-feather=\"message-square\"></i>\n              <span class=\"link-title\">Tikets</span>\n            </a>\n          </li>\n          <li class=\"nav-item nav-category\">Data</li>\n        </ul>\n      </div>\n    </nav>\n\t\t<!-- partial -->"
+        }
+    ]
+}

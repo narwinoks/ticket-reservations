@@ -1,0 +1,34 @@
+{
+    "sourceFile": "database/factories/TicketFactory.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1666348002293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666348009014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n      */\n     public function definition()\n     {\n         return [\n-            'nama'\n+            'nama'=>$this->fak\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348014787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n      */\n     public function definition()\n     {\n         return [\n-            'nama'=>$this->fak\n+            'nama'=>$this->faker->text()\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348021783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n      */\n     public function definition()\n     {\n         return [\n-            'nama'=>$this->faker->text()\n+            'nama'=>$this->faker->text(10),\n+            ''\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1666348037415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n     public function definition()\n     {\n         return [\n             'nama'=>$this->faker->text(10),\n-            'highlight'\n+            'highlight'=\n         ];\n     }\n }\n"
+                }
+            ],
+            "date": 1666348002293,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Database\\Factories;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\Factory;\n\n/**\n * @extends \\Illuminate\\Database\\Eloquent\\Factories\\Factory<\\App\\Models\\Ticket>\n */\nclass TicketFactory extends Factory\n{\n    /**\n     * Define the model's default state.\n     *\n     * @return array<string, mixed>\n     */\n    public function definition()\n    {\n        return [\n            'nama'\n        ];\n    }\n}\n"
+        }
+    ]
+}

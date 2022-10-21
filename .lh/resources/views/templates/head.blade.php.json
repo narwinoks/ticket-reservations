@@ -1,0 +1,30 @@
+{
+    "sourceFile": "resources/views/templates/head.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1666340913823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666342413574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,8 @@\n   <!-- Layout styles -->  \n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/css/demo_1/style.css') }}\">\n   <!-- End layout styles -->\n   <link rel=\"shortcut icon\" href=\"{{ asset('assets/images/favicon.png') }}\" />\n+  s\n </head>\n <body>\n \t<div class=\"main-wrapper\">\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666344148738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \t<!-- core:css -->\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/core/core.css') }}\">\n \t<!-- endinject -->\n   <!-- plugin css for this page -->\n-  <link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}\">\n+  {{-- <link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}\"> --}}\n \t<!-- end plugin css for this page -->\n \t<!-- inject:css -->\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/fonts/feather-font/css/iconfont.css') }}\">\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}\">\n@@ -18,8 +18,8 @@\n   <!-- Layout styles -->  \n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/css/demo_1/style.css') }}\">\n   <!-- End layout styles -->\n   <link rel=\"shortcut icon\" href=\"{{ asset('assets/images/favicon.png') }}\" />\n-  s\n+  @stack('styles')\n </head>\n <body>\n \t<div class=\"main-wrapper\">\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666346439833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \t<!-- core:css -->\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/core/core.css') }}\">\n \t<!-- endinject -->\n   <!-- plugin css for this page -->\n-  {{-- <link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}\"> --}}\n+  <link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}\">\n \t<!-- end plugin css for this page -->\n \t<!-- inject:css -->\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/fonts/feather-font/css/iconfont.css') }}\">\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}\">\n"
+                }
+            ],
+            "date": 1666340913823,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\t<title>NobleUI Responsive Bootstrap 4 Dashboard Template</title>\n\t<!-- core:css -->\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/core/core.css') }}\">\n\t<!-- endinject -->\n  <!-- plugin css for this page -->\n  <link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}\">\n\t<!-- end plugin css for this page -->\n\t<!-- inject:css -->\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/fonts/feather-font/css/iconfont.css') }}\">\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}\">\n\t<!-- endinject -->\n  <!-- Layout styles -->  \n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/css/demo_1/style.css') }}\">\n  <!-- End layout styles -->\n  <link rel=\"shortcut icon\" href=\"{{ asset('assets/images/favicon.png') }}\" />\n</head>\n<body>\n\t<div class=\"main-wrapper\">"
+        }
+    ]
+}

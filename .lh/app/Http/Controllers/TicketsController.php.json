@@ -1,0 +1,242 @@
+{
+    "sourceFile": "app/Http/Controllers/TicketsController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 56,
+            "patches": [
+                {
+                    "date": 1666341535830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666341540964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function index()\n     {\n-        return view\n+        return view('tic\n     }\n \n     /**\n      * Show the form for creating a new resource.\n"
+                },
+                {
+                    "date": 1666341547825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function index()\n     {\n-        return view('tic\n+        return view('ticket.index');\n     }\n \n     /**\n      * Show the form for creating a new resource.\n"
+                },
+                {
+                    "date": 1666341555620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,16 +14,17 @@\n     public function index()\n     {\n         return view('ticket.index');\n     }\n-\n+    \n     /**\n      * Show the form for creating a new resource.\n      *\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function create()\n     {\n+        return view('ticket.create');\n         //\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1666341561644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function edit($id)\n     {\n-        //\n+        \n     }\n \n     /**\n      * Update the specified resource in storage.\n"
+                },
+                {
+                    "date": 1666341570612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,10 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function show($id)\n     {\n-        //\n+        return view('ticket.create');\n+        \n     }\n \n     /**\n      * Show the form for editing the specified resource.\n"
+                },
+                {
+                    "date": 1666341576138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,10 +45,9 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function show($id)\n     {\n-        return view('ticket.create');\n-        \n+        return view('ticket.edit');    \n     }\n \n     /**\n      * Show the form for editing the specified resource.\n"
+                },
+                {
+                    "date": 1666363411009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,85 @@\n+<?php\n+\n+namespace App\\Http\\Controllers;\n+\n+use Illuminate\\Http\\Request;\n+\n+class TicketsController extends Controller\n+{\n+    /**\n+     * Display a listing of the resource.\n+     *\n+     * @return \\Illuminate\\Http\\Response\n+     */\n+    public function index()\n+    {\n+        return view('ticket.index');\n+    }\n+    \n+    /**\n+     * Show the form for creating a new resource.\n+     *\n+     * @return \\Illuminate\\Http\\Response\n+     */\n+    public function create()\n+    {\n+        return view('ticket.create');\n+        //\n+    }\n+\n+    /**\n+     * Store a newly created resource in storage.\n+     *\n+     * @param  \\Illuminate\\Http\\Request  $request\n+     * @return \\Illuminate\\Http\\Response\n+     */\n+    public function store(Request $request)\n+    {\n+        \n+    }\n+\n+    /**\n+     * Display the specified resource.\n+     *\n+     * @param  int  $id\n+     * @return \\Illuminate\\Http\\Response\n+     */\n+    public function show($id)\n+    {\n+        return view('ticket.edit');    \n+    }\n+\n+    /**\n+     * Show the form for editing the specified resource.\n+     *\n+     * @param  int  $id\n+     * @return \\Illuminate\\Http\\Response\n+     */\n+    public function edit($id)\n+    {\n+        \n+    }\n+\n+    /**\n+     * Update the specified resource in storage.\n+     *\n+     * @param  \\Illuminate\\Http\\Request  $request\n+     * @param  int  $id\n+     * @return \\Illuminate\\Http\\Response\n+     */\n+    public function update(Request $request, $id)\n+    {\n+        //\n+    }\n+\n+    /**\n+     * Remove the specified resource from storage.\n+     *\n+     * @param  int  $id\n+     * @return \\Illuminate\\Http\\Response\n+     */\n+    public function destroy($id)\n+    {\n+        //\n+    }\n+}\n"
+                },
+                {
+                    "date": 1666363508571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,15 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function store(Request $request)\n     {\n-        \n+        $validateData = $request->validate([\n+            'title' => 'required|max:255',\n+            'slug' => 'required|unique:posts',\n+            'image' => 'file|max:1024',\n+            'category_id' => 'required',\n+            'body' => 'required'\n+        ]);\n     }\n \n     /**\n      * Display the specified resource.\n@@ -82,89 +88,4 @@\n     {\n         //\n     }\n }\n-<?php\n-\n-namespace App\\Http\\Controllers;\n-\n-use Illuminate\\Http\\Request;\n-\n-class TicketsController extends Controller\n-{\n-    /**\n-     * Display a listing of the resource.\n-     *\n-     * @return \\Illuminate\\Http\\Response\n-     */\n-    public function index()\n-    {\n-        return view('ticket.index');\n-    }\n-    \n-    /**\n-     * Show the form for creating a new resource.\n-     *\n-     * @return \\Illuminate\\Http\\Response\n-     */\n-    public function create()\n-    {\n-        return view('ticket.create');\n-        //\n-    }\n-\n-    /**\n-     * Store a newly created resource in storage.\n-     *\n-     * @param  \\Illuminate\\Http\\Request  $request\n-     * @return \\Illuminate\\Http\\Response\n-     */\n-    public function store(Request $request)\n-    {\n-        //\n-    }\n-\n-    /**\n-     * Display the specified resource.\n-     *\n-     * @param  int  $id\n-     * @return \\Illuminate\\Http\\Response\n-     */\n-    public function show($id)\n-    {\n-        return view('ticket.edit');    \n-    }\n-\n-    /**\n-     * Show the form for editing the specified resource.\n-     *\n-     * @param  int  $id\n-     * @return \\Illuminate\\Http\\Response\n-     */\n-    public function edit($id)\n-    {\n-        \n-    }\n-\n-    /**\n-     * Update the specified resource in storage.\n-     *\n-     * @param  \\Illuminate\\Http\\Request  $request\n-     * @param  int  $id\n-     * @return \\Illuminate\\Http\\Response\n-     */\n-    public function update(Request $request, $id)\n-    {\n-        //\n-    }\n-\n-    /**\n-     * Remove the specified resource from storage.\n-     *\n-     * @param  int  $id\n-     * @return \\Illuminate\\Http\\Response\n-     */\n-    public function destroy($id)\n-    {\n-        //\n-    }\n-}\n"
+                },
+                {
+                    "date": 1666363520164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n      */\n     public function store(Request $request)\n     {\n         $validateData = $request->validate([\n-            'title' => 'required|max:255',\n+            'name' => 'required|max:255',\n             'slug' => 'required|unique:posts',\n             'image' => 'file|max:1024',\n             'category_id' => 'required',\n             'body' => 'required'\n"
+                },
+                {
+                    "date": 1666363525484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,8 @@\n     public function store(Request $request)\n     {\n         $validateData = $request->validate([\n             'name' => 'required|max:255',\n-            'slug' => 'required|unique:posts',\n-            'image' => 'file|max:1024',\n             'category_id' => 'required',\n             'body' => 'required'\n         ]);\n     }\n"
+                },
+                {
+                    "date": 1666363550529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n     public function store(Request $request)\n     {\n         $validateData = $request->validate([\n             'name' => 'required|max:255',\n-            'category_id' => 'required',\n+            'location' => 'required',\n             'body' => 'required'\n         ]);\n     }\n \n"
+                },
+                {
+                    "date": 1666363565737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     {\n         $validateData = $request->validate([\n             'name' => 'required|max:255',\n             'location' => 'required',\n-            'body' => 'required'\n+            'avalible' => 'required'\n         ]);\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1666363571328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     {\n         $validateData = $request->validate([\n             'name' => 'required|max:255',\n             'location' => 'required',\n-            'avalible' => 'required'\n+            'avalible' => 'required|integer'\n         ]);\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1666363594010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,11 @@\n             'name' => 'required|max:255',\n             'location' => 'required',\n             'avalible' => 'required|integer'\n         ]);\n+\n+        post::create($validateData);\n+        return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n     /**\n      * Display the specified resource.\n"
+                },
+                {
+                    "date": 1666363600662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n             'location' => 'required',\n             'avalible' => 'required|integer'\n         ]);\n \n-        post::create($validateData);\n+        T::create($validateData);\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1666363606509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace App\\Http\\Controllers;\n \n+use App\\Models\\Ticket;\n use Illuminate\\Http\\Request;\n \n class TicketsController extends Controller\n {\n@@ -40,9 +41,9 @@\n             'location' => 'required',\n             'avalible' => 'required|integer'\n         ]);\n \n-        T::create($validateData);\n+       $t  Ticket::create($validateData);\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1666363612886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n             'location' => 'required',\n             'avalible' => 'required|integer'\n         ]);\n \n-       $t  Ticket::create($validateData);\n+       $ticket=Ticket::create($validateData);\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1666363621402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n             'avalible' => 'required|integer'\n         ]);\n \n        $ticket=Ticket::create($validateData);\n+       if($ticket)\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1666363636071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,11 @@\n             'avalible' => 'required|integer'\n         ]);\n \n        $ticket=Ticket::create($validateData);\n-       if($ticket)\n+       if($ticket){\n+          foreach\n+       }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1666363641686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n         ]);\n \n        $ticket=Ticket::create($validateData);\n        if($ticket){\n-          foreach\n+          for()\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n"
+                },
+                {
+                    "date": 1666363649202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n         ]);\n \n        $ticket=Ticket::create($validateData);\n        if($ticket){\n-          for()\n+          for($i =1 ;$i <= )\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n"
+                },
+                {
+                    "date": 1666363657617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n         ]);\n \n        $ticket=Ticket::create($validateData);\n        if($ticket){\n-          for($i =1 ;$i <= )\n+          for($i =1 ;$i <= $request->ava)\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n"
+                },
+                {
+                    "date": 1666363663367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n         ]);\n \n        $ticket=Ticket::create($validateData);\n        if($ticket){\n-          for($i =1 ;$i <= $request->ava)\n+          for($i =1 ;$i <= $request->avalible)\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n"
+                },
+                {
+                    "date": 1666363669225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,11 @@\n         ]);\n \n        $ticket=Ticket::create($validateData);\n        if($ticket){\n-          for($i =1 ;$i <= $request->avalible)\n+          for($i =1 ;$i <= $request->avalible; $i++){\n+            \n+          }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n \n"
+                },
+                {
+                    "date": 1666363675018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n \n        $ticket=Ticket::create($validateData);\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n-            \n+            Tike\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n"
+                },
+                {
+                    "date": 1666363681590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n namespace App\\Http\\Controllers;\n \n use App\\Models\\Ticket;\n+use App\\Models\\TicketData;\n use Illuminate\\Http\\Request;\n \n class TicketsController extends Controller\n {\n@@ -44,9 +45,9 @@\n \n        $ticket=Ticket::create($validateData);\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n-            Tike\n+            TicketData::create()\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n"
+                },
+                {
+                    "date": 1666363699484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,11 @@\n \n        $ticket=Ticket::create($validateData);\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n-            TicketData::create()\n+            TicketData::create([\n+                    'code'\n+            ]);\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n"
+                },
+                {
+                    "date": 1666363707163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,10 @@\n        $ticket=Ticket::create($validateData);\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n             TicketData::create([\n-                    'code'\n+                ''\n+                'code'=>''\n             ]);\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n"
+                },
+                {
+                    "date": 1666363736150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n        $ticket=Ticket::create($validateData);\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n             TicketData::create([\n-                ''\n+                    'code'\n                 'code'=>''\n             ]);\n           }\n        }\n"
+                },
+                {
+                    "date": 1666363761557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n        $ticket=Ticket::create($validateData);\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n             TicketData::create([\n-                    'code'\n+                    'ticket_id'\n                 'code'=>''\n             ]);\n           }\n        }\n"
+                },
+                {
+                    "date": 1666363767330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n        $ticket=Ticket::create($validateData);\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n             TicketData::create([\n-                    'ticket_id'\n+                'ticket_id'=>\n                 'code'=>''\n             ]);\n           }\n        }\n"
+                },
+                {
+                    "date": 1666363774529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n        $ticket=Ticket::create($validateData);\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n             TicketData::create([\n-                'ticket_id'=>\n-                'code'=>''\n+                'ticket_id'=>$ticket->id,\n+                'code'=>\n             ]);\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n"
+                },
+                {
+                    "date": 1666363780900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,8 @@\n         return view('ticket.create');\n         //\n     }\n \n-    /**\n-     * Store a newly created resource in storage.\n-     *\n-     * @param  \\Illuminate\\Http\\Request  $request\n-     * @return \\Illuminate\\Http\\Response\n-     */\n     public function store(Request $request)\n     {\n         $validateData = $request->validate([\n             'name' => 'required|max:255',\n"
+                },
+                {
+                    "date": 1666363786918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,14 +16,8 @@\n     public function index()\n     {\n         return view('ticket.index');\n     }\n-    \n-    /**\n-     * Show the form for creating a new resource.\n-     *\n-     * @return \\Illuminate\\Http\\Response\n-     */\n     public function create()\n     {\n         return view('ticket.create');\n         //\n"
+                },
+                {
+                    "date": 1666363799030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,8 @@\n use Illuminate\\Http\\Request;\n \n class TicketsController extends Controller\n {\n-    /**\n-     * Display a listing of the resource.\n-     *\n-     * @return \\Illuminate\\Http\\Response\n-     */\n     public function index()\n     {\n         return view('ticket.index');\n     }\n@@ -41,15 +36,9 @@\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n-\n-    /**\n-     * Display the specified resource.\n-     *\n-     * @param  int  $id\n-     * @return \\Illuminate\\Http\\Response\n-     */\n+    pr\n     public function show($id)\n     {\n         return view('ticket.edit');    \n     }\n"
+                },
+                {
+                    "date": 1666363808593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n-    pr\n+    private function generate\n     public function show($id)\n     {\n         return view('ticket.edit');    \n     }\n"
+                },
+                {
+                    "date": 1666363814544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,11 @@\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n-    private function generate\n+    private function generateCode(){\n+        \n+    }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n     }\n"
+                },
+                {
+                    "date": 1666363819699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,10 @@\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n-    private function generateCode(){\n-        \n+    private function generateCode($name){\n+\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666363908420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n             TicketData::create([\n                 'ticket_id'=>$ticket->id,\n-                'code'=>\n+                'code'=>$this->geb\n             ]);\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n"
+                },
+                {
+                    "date": 1666363915744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n             TicketData::create([\n                 'ticket_id'=>$ticket->id,\n-                'code'=>$this->geb\n+                'code'=>$this->generateCode($rea)\n             ]);\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n"
+                },
+                {
+                    "date": 1666363936124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,10 @@\n        if($ticket){\n           for($i =1 ;$i <= $request->avalible; $i++){\n             TicketData::create([\n                 'ticket_id'=>$ticket->id,\n-                'code'=>$this->generateCode($rea)\n+                'code'=>$this->generateCode($request->name),\n+                'available'=>1\n             ]);\n           }\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n"
+                },
+                {
+                    "date": 1666363941807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-\n+        \n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666363946918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-        \n+        $years\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666363953529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,10 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-        $years\n+        // format code is \n+        $years=\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666363962346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-        // format code is \n+        // format code is  randoma\n         $years=\n     }\n     public function show($id)\n     {\n"
+                },
+                {
+                    "date": 1666363967744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-        // format code is  randoma\n+        // format code is  random-\n         $years=\n     }\n     public function show($id)\n     {\n"
+                },
+                {
+                    "date": 1666363975406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-        // format code is  random-\n+        // format code is  random-2first naem -\n         $years=\n     }\n     public function show($id)\n     {\n"
+                },
+                {
+                    "date": 1666363981262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-        // format code is  random-2first naem -\n+        // format code is  random-2first naem -years=\n         $years=\n     }\n     public function show($id)\n     {\n"
+                },
+                {
+                    "date": 1666363987564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-        // format code is  random-2first naem -years=\n+        // format code is  random-2first naem -years -\n         $years=\n     }\n     public function show($id)\n     {\n"
+                },
+                {
+                    "date": 1666363998096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n        }\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n-        // format code is  random-2first naem -years -\n+        // format code is  random number -2first naem -years -\n         $years=\n     }\n     public function show($id)\n     {\n"
+                },
+                {
+                    "date": 1666364167297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n         // format code is  random number -2first naem -years -\n-        $years=\n+        $years=Dat\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666364172879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \n use App\\Models\\Ticket;\n use App\\Models\\TicketData;\n use Illuminate\\Http\\Request;\n+use Illuminate\\Support\\Facades\\Date;\n \n class TicketsController extends Controller\n {\n     public function index()\n@@ -39,9 +40,9 @@\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n         // format code is  random number -2first naem -years -\n-        $years=Dat\n+        $years=Date\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666364178330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n         return redirect('/dashboard/post')->with('success', 'Your Post Succesfully Has Been Added');\n     }\n     private function generateCode($name){\n         // format code is  random number -2first naem -years -\n-        $years=Date\n+        $years=Date('Y');\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666364199974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,9 @@\n     }\n     private function generateCode($name){\n         // format code is  random number -2first naem -years -\n         $years=Date('Y');\n+        $letter =\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666364206605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n     }\n     private function generateCode($name){\n         // format code is  random number -2first naem -years -\n         $years=Date('Y');\n-        $letter =str()->\n+        $letter =str()->r\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                },
+                {
+                    "date": 1666364247928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     private function generateCode($name){\n         // format code is  random number -2first naem -years -\n         $years=Date('Y');\n         $letter =str()->random(1);\n-        $firstname=substr($)\n+        $firstname=substr($n)\n     }\n     public function show($id)\n     {\n         return view('ticket.edit');    \n"
+                }
+            ],
+            "date": 1666341535830,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass TicketsController extends Controller\n{\n    /**\n     * Display a listing of the resource.\n     *\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function index()\n    {\n        return view\n    }\n\n    /**\n     * Show the form for creating a new resource.\n     *\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function create()\n    {\n        //\n    }\n\n    /**\n     * Store a newly created resource in storage.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function store(Request $request)\n    {\n        //\n    }\n\n    /**\n     * Display the specified resource.\n     *\n     * @param  int  $id\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function show($id)\n    {\n        //\n    }\n\n    /**\n     * Show the form for editing the specified resource.\n     *\n     * @param  int  $id\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function edit($id)\n    {\n        //\n    }\n\n    /**\n     * Update the specified resource in storage.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @param  int  $id\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function update(Request $request, $id)\n    {\n        //\n    }\n\n    /**\n     * Remove the specified resource from storage.\n     *\n     * @param  int  $id\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function destroy($id)\n    {\n        //\n    }\n}\n"
+        }
+    ]
+}
