@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/Http/Controllers/AuthController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1666335884106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666336358849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,8 @@\n use Illuminate\\Http\\Request;\n \n class AuthController extends Controller\n {\n-    public function login()\n+    public function login(){\n+        ret\n+    }\n }\n"
+                },
+                {
+                    "date": 1666336377076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \n class AuthController extends Controller\n {\n     public function login(){\n-        ret\n+        return view('')\n     }\n }\n"
+                },
+                {
+                    "date": 1666336382233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \n class AuthController extends Controller\n {\n     public function login(){\n-        return view('')\n+        return view('auth.login';)\n     }\n }\n"
+                },
+                {
+                    "date": 1666336404214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n \n class AuthController extends Controller\n {\n     public function login(){\n-        return view('auth.login';)\n+        return view('auth.login');\n     }\n+    \n }\n"
+                }
+            ],
+            "date": 1666335884106,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass AuthController extends Controller\n{\n    public function login()\n}\n"
+        }
+    ]
+}
