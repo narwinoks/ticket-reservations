@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 29,
+            "activePatchIndex": 30,
             "patches": [
                 {
                     "date": 1666398828612,
@@ -124,6 +124,10 @@
                 {
                     "date": 1666402522543,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n                              <form action=\"{{ route('booking.destroy', $booking->id) }}\" method=\"post\">\n                                     @method('DELETE')\n                                     @csrf\n                                     <button class=\"btn btn-danger btn-sm\" id=\"delete\">Delete</button>\n-                                    <a href=\"{{ route('ticket.edit',$booking->id) }}\" class=\"btn btn-primary btn-sm mx-1\">Update</a>\n+                                    <a href=\"{{ route('booking.edit',$booking->id) }}\" class=\"btn btn-primary btn-sm mx-1\">Update</a>\n                               </form>\n                           </td>\n                         </tr>\n                       @endforeach\n"
+                },
+                {
+                    "date": 1666414144637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,13 @@\n @extends('templates.main')\n @section('content')\n+<div class=\"col-md-12 col-sm-12\">\n+  @if (session()->has('success'))\n+    <div class=\"alert alert-fill-success\" role=\"alert\">\n+      {{ session('success')}}\n+    </div>\n+  @endif\n+</div>\n   <div class=\"col-md-12 grid-margin stretch-card\">\n             <div class=\"card\">\n               <div class=\"card-body\">\n                    <h6 class=\"card-title\">List Data Reservation</h6>\n"
                 }
             ],
             "date": 1666398828612,

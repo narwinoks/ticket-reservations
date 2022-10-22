@@ -1,0 +1,134 @@
+{
+    "sourceFile": "app/Http/Controllers/EventController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1666406143000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666406151490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,8 @@\n use Illuminate\\Http\\Request;\n \n class EventController extends Controller\n {\n-    public function index()\n+    public function index(){\n+        return view('')\n+    }\n }\n"
+                },
+                {
+                    "date": 1666406158037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \n class EventController extends Controller\n {\n     public function index(){\n-        return view('')\n+        return view('event.index')\n     }\n }\n"
+                },
+                {
+                    "date": 1666406453690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n \n class EventController extends Controller\n {\n     public function index(){\n-        return view('event.index')\n+        $\n+        return view('event.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666406458807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n \n class EventController extends Controller\n {\n     public function index(){\n-        $\n+        $event=\n         return view('event.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666406467890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n <?php\n \n namespace App\\Http\\Controllers;\n \n+use App\\Models\\Ticket;\n use Illuminate\\Http\\Request;\n \n class EventController extends Controller\n {\n     public function index(){\n-        $event=\n+        $event=Ticket::with('')\n         return view('event.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666406475244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n \n class EventController extends Controller\n {\n     public function index(){\n-        $event=Ticket::with('')\n+        $event=Ticket::with('TiketData')\n         return view('event.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666406481608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n \n class EventController extends Controller\n {\n     public function index(){\n-        $event=Ticket::with('TiketData')\n+        $event=Ticket::with('TiketData')->get()\n         return view('event.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666406486971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n \n class EventController extends Controller\n {\n     public function index(){\n-        $event=Ticket::with('TiketData')->get()\n+        $event=Ticket::with('TiketData')->get();\n+        dd($event)\n         return view('event.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666406512859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,7 @@\n class EventController extends Controller\n {\n     public function index(){\n         $event=Ticket::with('TiketData')->get();\n-        dd($event)\n         return view('event.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666406525930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n \n class EventController extends Controller\n {\n     public function index(){\n-        $event=Ticket::with('TiketData')->get();\n+        $events=Ticket::with('TiketData')->get();\n         return view('event.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666406532009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n class EventController extends Controller\n {\n     public function index(){\n         $events=Ticket::with('TiketData')->get();\n-        return view('event.index');\n+        return view('event.index',co);\n     }\n }\n"
+                },
+                {
+                    "date": 1666407821073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,9 @@\n class EventController extends Controller\n {\n     public function index(){\n         $events=Ticket::with('TiketData')->get();\n-        return view('event.index',co);\n+        return view('event.index',compact('events'));\n     }\n+\n+    public function detail()\n }\n"
+                },
+                {
+                    "date": 1666407827756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,8 @@\n         $events=Ticket::with('TiketData')->get();\n         return view('event.index',compact('events'));\n     }\n \n-    public function detail()\n+    public function detail($slug){\n+\n+    }\n }\n"
+                },
+                {
+                    "date": 1666407833284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n         return view('event.index',compact('events'));\n     }\n \n     public function detail($slug){\n-\n+        return $slug;\n     }\n }\n"
+                },
+                {
+                    "date": 1666408002420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,8 @@\n         return view('event.index',compact('events'));\n     }\n \n     public function detail($slug){\n+        \n         return $slug;\n     }\n }\n"
+                },
+                {
+                    "date": 1666408008312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n         return view('event.index',compact('events'));\n     }\n \n     public function detail($slug){\n-        \n+        $event=Ticket::\n         return $slug;\n     }\n }\n"
+                },
+                {
+                    "date": 1666408017096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n         return view('event.index',compact('events'));\n     }\n \n     public function detail($slug){\n-        $event=Ticket::\n+        $event=Ticket::where('slug','=')\n         return $slug;\n     }\n }\n"
+                },
+                {
+                    "date": 1666408023087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n         return view('event.index',compact('events'));\n     }\n \n     public function detail($slug){\n-        $event=Ticket::where('slug','=')\n+        $event=Ticket::where('slug','=',$slug)-\n         return $slug;\n     }\n }\n"
+                },
+                {
+                    "date": 1666408031809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n         return view('event.index',compact('events'));\n     }\n \n     public function detail($slug){\n-        $event=Ticket::where('slug','=',$slug)-\n-        return $slug;\n+        $event=Ticket::where('slug','=',$slug)->get();\n+        return view('event.index', compact('events'));\n+\n     }\n }\n"
+                },
+                {
+                    "date": 1666408038731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     }\n \n     public function detail($slug){\n         $event=Ticket::where('slug','=',$slug)->get();\n-        return view('event.index', compact('events'));\n+        return view('event.detail', compact('event'));\n \n     }\n }\n"
+                },
+                {
+                    "date": 1666408063208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,6 @@\n \n     public function detail($slug){\n         $event=Ticket::where('slug','=',$slug)->get();\n         return view('event.detail', compact('event'));\n-\n     }\n }\n"
+                },
+                {
+                    "date": 1666408290772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,9 @@\n     }\n \n     public function detail($slug){\n         $event=Ticket::where('slug','=',$slug)->get();\n+        dd()\n         return view('event.detail', compact('event'));\n     }\n+\n }\n"
+                },
+                {
+                    "date": 1666408344218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n         return view('event.index',compact('events'));\n     }\n \n     public function detail($slug){\n-        $event=Ticket::where('slug','=',$slug)->get();\n-        dd()\n+        $event=Ticket::where('slug','=',$slug)->first();\n+        dd($event);\n         return view('event.detail', compact('event'));\n     }\n \n }\n"
+                },
+                {
+                    "date": 1666408351004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     }\n \n     public function detail($slug){\n         $event=Ticket::where('slug','=',$slug)->first();\n-        dd($event);\n+        // dd($event);\n         return view('event.detail', compact('event'));\n     }\n \n }\n"
+                },
+                {
+                    "date": 1666413137988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,7 @@\n         // dd($event);\n         return view('event.detail', compact('event'));\n     }\n \n+    public function \n+\n }\n"
+                },
+                {
+                    "date": 1666413144926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n         // dd($event);\n         return view('event.detail', compact('event'));\n     }\n \n-    public function \n+    public function eventBuy(Request $request)\n \n }\n"
+                },
+                {
+                    "date": 1666413322399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,13 @@\n         // dd($event);\n         return view('event.detail', compact('event'));\n     }\n \n-    public function eventBuy(Request $request)\n+    public function eventBuy(Request $request){\n+         $validateData = $request->validate([\n+            'name' => 'required|max:255',\n+            'email' => 'required',\n+        ]);\n \n+    }\n+\n }\n"
+                },
+                {
+                    "date": 1666413328521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n     public function eventBuy(Request $request){\n          $validateData = $request->validate([\n             'name' => 'required|max:255',\n             'email' => 'required|email',\n+            \n         ]);\n \n     }\n \n"
+                },
+                {
+                    "date": 1666413460801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,11 @@\n             'name' => 'required|max:255',\n             'email' => 'required|email',\n             'sum'=>'max:2'\n         ]);\n-        for\n+        for ($i=0; $i < ; $i++) { \n+            # code...\n+        }\n         $data=Reservation::create([\n             'email' => $request->email,\n             'name' => $request->name,\n         ]);\n"
+                }
+            ],
+            "date": 1666406143000,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass EventController extends Controller\n{\n    public function index()\n}\n"
+        }
+    ]
+}

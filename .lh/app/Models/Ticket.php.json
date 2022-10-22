@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 33,
+            "activePatchIndex": 35,
             "patches": [
                 {
                     "date": 1666341906973,
@@ -140,6 +140,14 @@
                 {
                     "date": 1666401212132,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,6 @@\n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n \n-    public function tes(){\n-        return $this->hasMany(TicketData::class);\n-    }\n }\n \n"
+                },
+                {
+                    "date": 1666412499205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n class Ticket extends Model\n {\n     use HasFactory;\n     protected $guarded = ['id'];\n+    protected $dates = ['name_field'];\n \n+\n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n \n"
+                },
+                {
+                    "date": 1666412507302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n class Ticket extends Model\n {\n     use HasFactory;\n     protected $guarded = ['id'];\n-    protected $dates = ['name_field'];\n+    protected $dates = ['events'];\n \n \n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n"
                 }
             ],
             "date": 1666341906973,

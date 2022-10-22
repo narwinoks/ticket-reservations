@@ -11,6 +11,8 @@ class Ticket extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $dates = ['event_date'];
+
 
     public function TiketData(){
         return $this->hasMany(TicketData::class)->where('available' , '=', 1);

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "public/assets/css/custome/card.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1666407121630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666407133162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,3 @@\n-<style>.card {\n+.card {\n     min-height: 200px;\n-}\n-\n\\ No newline at end of file\n-</style>\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666407166661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n .card {\n-    min-height: 200px;\n+    min-height: ;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666407233933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n .card {\n-    min-height: ;\n+    min-height: 250px;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666407276954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n .card {\n     min-height: 250px;\n-}\n\\ No newline at end of file\n+}\n"
+                },
+                {
+                    "date": 1666411976174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n .card {\n-    min-height: 250px;\n+    min-height: 100px;\n+    cursor: pointer;\n }\n"
+                },
+                {
+                    "date": 1666412038535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n .card {\n-    min-height: 100px;\n+    min-height: 40px;\n     cursor: pointer;\n }\n"
+                },
+                {
+                    "date": 1666412227773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n .card {\n-    min-height: 40px;\n+    /* min-height: 40px; */\n     cursor: pointer;\n }\n"
+                },
+                {
+                    "date": 1666412240341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n .card {\n-    /* min-height: 40px; */\n+    min-height: 40px;\n     cursor: pointer;\n }\n"
+                }
+            ],
+            "date": 1666407121630,
+            "name": "Commit-0",
+            "content": "<style>.card {\n    min-height: 200px;\n}\n\n</style>"
+        }
+    ]
+}

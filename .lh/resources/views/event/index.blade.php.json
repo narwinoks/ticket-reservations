@@ -1,0 +1,30 @@
+{
+    "sourceFile": "resources/views/event/index.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1666406237165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666406243542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n-sec\n\\ No newline at end of file\n+e\n+@section('content')\n+    \n+@endsection\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666406250473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n-@extends('templates.')\n+@extends('templates.h')\n @section('content')\n     \n @endsection\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666406306066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n @extends('templates.home.main')\n @section('content')\n <div class=\"row\">\n <div class=\"col-md-12\">\n-    .col-md-4\n+    <div class=\"col-md-4\"></div>\n </div>\n </div>    \n @endsection\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1666406237165,
+            "name": "Commit-0",
+            "content": "sec"
+        }
+    ]
+}
