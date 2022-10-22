@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 33,
             "patches": [
                 {
                     "date": 1666341906973,
@@ -112,6 +112,34 @@
                 {
                     "date": 1666357105440,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,7 @@\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n-      return $this->whereHas('ticket_data', function (Builder $query) {\n-            $query->where('avalible', 1);\n-        })->get();\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666400397776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n+        return $this->hasMany(TicketData::class\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666401007669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n     use HasFactory;\n     protected $guarded = ['id'];\n \n     public function TiketData(){\n-        return $this->hasMany(TicketData::class\n+        return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666401026498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,8 @@\n \n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n+\n+    public function tes()\n }\n \n"
+                },
+                {
+                    "date": 1666401035834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,9 @@\n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n \n-    public function tes()\n+    public function tes(){\n+        return $this->belon\n+    }\n }\n \n"
+                },
+                {
+                    "date": 1666401047924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n \n     public function tes(){\n-        return $this->belon\n+        return $this->hasMany(Ti)\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666401053443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n \n     public function tes(){\n-        return $this->hasMany(Ti)\n+        return $this->hasMany(TicketData::class);\n     }\n }\n \n"
+                },
+                {
+                    "date": 1666401212132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,6 @@\n     public function TiketData(){\n         return $this->hasMany(TicketData::class)->where('available' , '=', 1);\n     }\n \n-    public function tes(){\n-        return $this->hasMany(TicketData::class);\n-    }\n }\n \n"
                 }
             ],
             "date": 1666341906973,

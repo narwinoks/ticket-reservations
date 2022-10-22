@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(1)->create();
         Ticket::factory(5)->create();
         TicketData::factory(30)->create();
-
+        $this->call([
+            BookingSeeder::class,
+        ]);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

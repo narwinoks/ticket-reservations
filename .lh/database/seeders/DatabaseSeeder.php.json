@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1666338172819,
@@ -36,6 +36,10 @@
                 {
                     "date": 1666348716613,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n      */\n     public function run()\n     {\n         \\App\\Models\\User::factory(1)->create();\n-        Ticket::factory(5)->create();\n+        Ticket::factory()->create();\n         TicketData::factory(30)->create();\n \n         // \\App\\Models\\User::factory()->create([\n         //     'name' => 'Test User',\n"
+                },
+                {
+                    "date": 1666399428917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     {\n         \\App\\Models\\User::factory(1)->create();\n         Ticket::factory(5)->create();\n         TicketData::factory(30)->create();\n-        \n+        $\n         // \\App\\Models\\User::factory()->create([\n         //     'name' => 'Test User',\n         //     'email' => 'test@example.com',\n         // ]);\n"
                 }
             ],
             "date": 1666338172819,

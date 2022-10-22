@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1666340975369,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666397175391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <div class=\"sidebar-body\">\n         <ul class=\"nav\">\n           <li class=\"nav-item nav-category\">Main</li>\n           <li class=\"nav-item\">\n-            <a href=\"{{ route('home') }}\" class=\"nav-link\">\n+            <a href=\"{{ route('dashb') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"box\"></i>\n               <span class=\"link-title\">Dashboard</span>\n             </a>\n           </li>\n"
+                },
+                {
+                    "date": 1666397748749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <div class=\"sidebar-body\">\n         <ul class=\"nav\">\n           <li class=\"nav-item nav-category\">Main</li>\n           <li class=\"nav-item\">\n-            <a href=\"{{ route('dashb') }}\" class=\"nav-link\">\n+            <a href=\"{{ route('dashboard') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"box\"></i>\n               <span class=\"link-title\">Dashboard</span>\n             </a>\n           </li>\n@@ -26,8 +26,13 @@\n               <span class=\"link-title\">Tikets</span>\n             </a>\n           </li>\n           <li class=\"nav-item nav-category\">Data</li>\n+          <li class=\"nav-item\">\n+            <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n+              <i class=\"link-icon\" data-feather=\"message-square\"></i>\n+              <span class=\"link-title\">Tikets</span>\n+            </a>\n         </ul>\n       </div>\n     </nav>\n \t\t<!-- partial -->\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666397754479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,13 @@\n           <li class=\"nav-item nav-category\">Data</li>\n           <li class=\"nav-item\">\n             <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n+              <span class=\"link-title\">Check in</span>\n+            </a>\n+          <li class=\"nav-item\">\n+            <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n+              <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Tikets</span>\n             </a>\n         </ul>\n       </div>\n"
+                },
+                {
+                    "date": 1666397761962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n             </a>\n           <li class=\"nav-item\">\n             <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n-              <span class=\"link-title\">Tikets</span>\n+              <span class=\"link-title\">Booking</span>\n             </a>\n         </ul>\n       </div>\n     </nav>\n"
                 }
             ],
             "date": 1666340975369,

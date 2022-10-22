@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 36,
+            "activePatchIndex": 68,
             "patches": [
                 {
                     "date": 1666337013291,
@@ -152,6 +152,134 @@
                 {
                     "date": 1666343080339,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n });\n \n Route::prefix('data')->group(function(){\n     Route::controller(DataController::class)->group(function(){\n-        Route::get('ticket.','data')->name('ticket.data');\n+        Route::get('ticket','\\')->name('ticket.data');\n     });\n });\n"
+                },
+                {
+                    "date": 1666397144139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,12 +28,13 @@\n Route::prefix('admin')->group(function(){\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n+    \n     Route::resource('ticket',TicketsController::class);\n });\n \n Route::prefix('data')->group(function(){\n     Route::controller(DataController::class)->group(function(){\n-        Route::get('ticket','\\')->name('ticket.data');\n+        Route::get('ticket','tickets')->name('ticket.data');\n     });\n });\n"
+                },
+                {
+                    "date": 1666397151498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,12 @@\n Route::prefix('admin')->group(function(){\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n-    \n+    Route::controller(Dash::class)->group(function(){\n+        Route::get('home','index')->name('home');\n+    });\n+\n     Route::resource('ticket',TicketsController::class);\n });\n \n Route::prefix('data')->group(function(){\n"
+                },
+                {
+                    "date": 1666397157619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Controllers\\AuthController;\n+use App\\Http\\Controllers\\DashboardController;\n use App\\Http\\Controllers\\DataController;\n use App\\Http\\Controllers\\HomeController;\n use App\\Http\\Controllers\\TicketsController;\n use Illuminate\\Support\\Facades\\Route;\n@@ -28,9 +29,9 @@\n Route::prefix('admin')->group(function(){\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n-    Route::controller(Dash::class)->group(function(){\n+    Route::controller(DashboardControllerardController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n"
+                },
+                {
+                    "date": 1666397163378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,10 @@\n Route::prefix('admin')->group(function(){\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n-    Route::controller(DashboardControllerardController::class)->group(function(){\n-        Route::get('home','index')->name('home');\n+    Route::controller(DashboardController::class)->group(function(){\n+        Route::get('dashboard','index')->name('home');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666398304951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,13 @@\n     Route::controller(HomeController::class)->group(function(){\n         Route::get('home','index')->name('home');\n     });\n     Route::controller(DashboardController::class)->group(function(){\n-        Route::get('dashboard','index')->name('home');\n+        Route::get('dashboard','index')->name('dashboard');\n     });\n+    Route::controller(DashboardController::class)->group(function(){\n+        Route::get('dashboard','index')->name('dashboard');\n+    });\n \n     Route::resource('ticket',TicketsController::class);\n });\n \n"
+                },
+                {
+                    "date": 1666398311331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n     });\n     Route::controller(DashboardController::class)->group(function(){\n         Route::get('dashboard','index')->name('dashboard');\n     });\n-    Route::controller(DashboardController::class)->group(function(){\n+    Route::controller(Che::class)->group(function(){\n         Route::get('dashboard','index')->name('dashboard');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n"
+                },
+                {
+                    "date": 1666398317075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Controllers\\AuthController;\n+use App\\Http\\Controllers\\CheckinController;\n use App\\Http\\Controllers\\DashboardController;\n use App\\Http\\Controllers\\DataController;\n use App\\Http\\Controllers\\HomeController;\n use App\\Http\\Controllers\\TicketsController;\n@@ -32,10 +33,10 @@\n     });\n     Route::controller(DashboardController::class)->group(function(){\n         Route::get('dashboard','index')->name('dashboard');\n     });\n-    Route::controller(Che::class)->group(function(){\n-        Route::get('dashboard','index')->name('dashboard');\n+    Route::controller(CheckinController::class)->group(function(){\n+        Route::get('','index')->name('dashboard');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666398324199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n     Route::controller(DashboardController::class)->group(function(){\n         Route::get('dashboard','index')->name('dashboard');\n     });\n     Route::controller(CheckinController::class)->group(function(){\n-        Route::get('','index')->name('dashboard');\n+        Route::get('checkin','index')->name('checkin.index');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666398981220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,11 @@\n     });\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n+    Route::controller(CheckinController::class)->group(function(){\n+        Route::get('checkin','index')->name('checkin.index');\n+    });\n \n     Route::resource('ticket',TicketsController::class);\n });\n \n"
+                },
+                {
+                    "date": 1666398989208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Controllers\\AuthController;\n+use App\\Http\\Controllers\\BookingController;\n use App\\Http\\Controllers\\CheckinController;\n use App\\Http\\Controllers\\DashboardController;\n use App\\Http\\Controllers\\DataController;\n use App\\Http\\Controllers\\HomeController;\n@@ -36,10 +37,10 @@\n     });\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n-    Route::controller(CheckinController::class)->group(function(){\n-        Route::get('checkin','index')->name('checkin.index');\n+    Route::controller(BookingController::class)->group(function(){\n+        Route::get('booking','index')->name('checkin.index');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666401704826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,10 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::get('booking','index')->name('checkin.index');\n+        Route::group\n+        Route::get('booking','index')->name('booking.index');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666401712049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::group\n+        Route::group('booking')\n         Route::get('booking','index')->name('booking.index');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n"
+                },
+                {
+                    "date": 1666401718598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::group('booking')\n+        Route::group('booking')->group(function())\n         Route::get('booking','index')->name('booking.index');\n     });\n \n     Route::resource('ticket',TicketsController::class);\n"
+                },
+                {
+                    "date": 1666401726029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,10 +38,12 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::group('booking')->group(function())\n-        Route::get('booking','index')->name('booking.index');\n+        Route::group('booking')->group(function(){\n+            Route::get('/','index')->name('booking.index');\n+\n+        });\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666401731645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,8 +40,9 @@\n     });\n     Route::controller(BookingController::class)->group(function(){\n         Route::group('booking')->group(function(){\n             Route::get('/','index')->name('booking.index');\n+            Route::delete('/','index')->name('booking.index');\n \n         });\n     });\n \n"
+                },
+                {
+                    "date": 1666401742123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     });\n     Route::controller(BookingController::class)->group(function(){\n         Route::group('booking')->group(function(){\n             Route::get('/','index')->name('booking.index');\n-            Route::delete('/','index')->name('booking.index');\n+            Route::delete('/','destroy')->name('booking.destroy');\n \n         });\n     });\n \n"
+                },
+                {
+                    "date": 1666401752357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     });\n     Route::controller(BookingController::class)->group(function(){\n         Route::group('booking')->group(function(){\n             Route::get('/','index')->name('booking.index');\n-            Route::delete('/','destroy')->name('booking.destroy');\n+            Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n         });\n     });\n \n"
+                },
+                {
+                    "date": 1666401905844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::group('booking')->group(function(){\n+        Route::pre\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n         });\n"
+                },
+                {
+                    "date": 1666401914131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::pre\n+        Route::prefix(function())\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n         });\n"
+                },
+                {
+                    "date": 1666401921648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,13 +38,14 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::prefix(function())\n+        Route::prefix(function(){\n+\n+        });\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n-        });\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666401927497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,12 +39,11 @@\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n         Route::prefix(function(){\n-\n-        });\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n+        });\n \n     });\n \n     Route::resource('ticket',TicketsController::class);\n"
+                },
+                {
+                    "date": 1666401933766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::prefix(function(){\n+        Route::prefix( , function(){\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n         });\n \n"
+                },
+                {
+                    "date": 1666401939807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::prefix( , function(){\n+        Route::prefix( 'booking', function(){\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n         });\n \n"
+                },
+                {
+                    "date": 1666401960391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::prefix( 'booking', function(){\n+        Route::prefix('booking', function(){\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n         });\n \n"
+                },
+                {
+                    "date": 1666401990877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n     });\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n+    Route::prefix('booking', function(){\n     Route::controller(BookingController::class)->group(function(){\n-        Route::prefix('booking', function(){\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n         });\n \n"
+                },
+                {
+                    "date": 1666402020216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     });\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n-    Route::prefix('booking', function(){\n+    Route::prefix('booking') function(){\n     Route::controller(BookingController::class)->group(function(){\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n         });\n"
+                },
+                {
+                    "date": 1666402034019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,14 +37,14 @@\n     });\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n-    Route::prefix('booking') function(){\n     Route::controller(BookingController::class)->group(function(){\n+        Route::prefix(function())\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n+\n         });\n-\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666402040144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::prefix(function())\n+        Route::prefix('booking')\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n         });\n"
+                },
+                {
+                    "date": 1666402048041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::prefix('booking')\n+        Route::prefix('booking')->group(function())\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n         });\n"
+                },
+                {
+                    "date": 1666402055092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,13 +38,15 @@\n     Route::controller(CheckinController::class)->group(function(){\n         Route::get('checkin','index')->name('checkin.index');\n     });\n     Route::controller(BookingController::class)->group(function(){\n-        Route::prefix('booking')->group(function())\n+        Route::prefix('booking')->group(function(){\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n         });\n+\n+        });\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666402466907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,12 +41,11 @@\n     Route::controller(BookingController::class)->group(function(){\n         Route::prefix('booking')->group(function(){\n             Route::get('/','index')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n+            \n \n         });\n-\n-        });\n     });\n \n     Route::resource('ticket',TicketsController::class);\n });\n"
+                },
+                {
+                    "date": 1666402477348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     });\n     Route::controller(BookingController::class)->group(function(){\n         Route::prefix('booking')->group(function(){\n             Route::get('/','index')->name('booking.index');\n-            Route::get('/{id}','edit')->name('booking.index');\n+            Route::get('/{id}/','edit')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n \n         });\n"
                 }
             ],
             "date": 1666337013291,

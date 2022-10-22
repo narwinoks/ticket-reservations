@@ -1,0 +1,102 @@
+{
+    "sourceFile": "app/Http/Controllers/BookingController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1666398867021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666398873872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,8 @@\n use Illuminate\\Http\\Request;\n \n class BookingController extends Controller\n {\n-    public function index()\n+    public function index(){\n+        return view()\n+    }\n }\n"
+                },
+                {
+                    "date": 1666398888394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        return view()\n+        return view('')\n     }\n }\n"
+                },
+                {
+                    "date": 1666398931184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        return view('')\n+        return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399694612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n+        $data=\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399701769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        $data=\n+        $data=Booking::with\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399711805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        $data=Booking::with\n+        $data=Booking::with('TiketData')\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399720724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        $data=Booking::with('TiketData')\n+        $data=Booking::with('TiketData')->get();\n+        dd($data)\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399726622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n <?php\n \n namespace App\\Http\\Controllers;\n \n+use App\\Models\\Booking;\n use Illuminate\\Http\\Request;\n \n class BookingController extends Controller\n {\n     public function index(){\n         $data=Booking::with('TiketData')->get();\n-        dd($data)\n+        dd($data);\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399858290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n class BookingController extends Controller\n {\n     public function index(){\n         $data=Booking::with('TiketData')->get();\n+        $data2=\n         dd($data);\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399866394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,16 @@\n \n namespace App\\Http\\Controllers;\n \n use App\\Models\\Booking;\n+use App\\Models\\TicketData;\n use Illuminate\\Http\\Request;\n \n class BookingController extends Controller\n {\n     public function index(){\n         $data=Booking::with('TiketData')->get();\n-        $data2=\n+        $data2=TicketData::\n         dd($data);\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399878817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n class BookingController extends Controller\n {\n     public function index(){\n         $data=Booking::with('TiketData')->get();\n-        $data2=TicketData::\n+        $data2=TicketData::with('Booking')\n         dd($data);\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399883956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n class BookingController extends Controller\n {\n     public function index(){\n         $data=Booking::with('TiketData')->get();\n-        $data2=TicketData::with('Booking')\n+        $data2=TicketData::with('Booking')->get();\n         dd($data);\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666399959305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        $data=Booking::with('TiketData')->get();\n+        $data=Booking::with('TicketData')->get();\n         $data2=TicketData::with('Booking')->get();\n-        dd($data);\n+        dd($data2);\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666400037465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,7 @@\n class BookingController extends Controller\n {\n     public function index(){\n         $data=Booking::with('TicketData')->get();\n-        $data2=TicketData::with('Booking')->get();\n-        dd($data2);\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666400043124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        $data=Booking::with('TicketData')->get();\n+        $booking=Booking::with('TicketData')->get();\n         return view('booking.index');\n     }\n }\n"
+                },
+                {
+                    "date": 1666400050537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n class BookingController extends Controller\n {\n     public function index(){\n         $booking=Booking::with('TicketData')->get();\n-        return view('booking.index');\n+        return view('booking.index',compact('booking'));\n     }\n }\n"
+                },
+                {
+                    "date": 1666400069513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        $booking=Booking::with('TicketData')->get();\n+        $booking=Booking::with(['TicketData')->get();\n         return view('booking.index',compact('booking'));\n     }\n }\n"
+                },
+                {
+                    "date": 1666400075966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        $booking=Booking::with(['TicketData')->get();\n+        $booking=Booking::with(['TicketData'.'T])->get();\n         return view('booking.index',compact('booking'));\n     }\n }\n"
+                },
+                {
+                    "date": 1666400084999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n \n class BookingController extends Controller\n {\n     public function index(){\n-        $booking=Booking::with(['TicketData'.'T])->get();\n+        $booking=Booking::with(['TicketData'.'Ticket'])->get();\n         return view('booking.index',compact('booking'));\n     }\n }\n"
+                },
+                {
+                    "date": 1666400092376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n class BookingController extends Controller\n {\n     public function index(){\n         $booking=Booking::with(['TicketData'.'Ticket'])->get();\n-        dd($booking)\n+        dd($booking);\n         return view('booking.index',compact('booking'));\n     }\n }\n"
+                },
+                {
+                    "date": 1666400559186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n class BookingController extends Controller\n {\n     public function index(){\n         $booking=Booking::with('TicketData.Tikect')->get();\n-        $booking=TicketData::with('.Tikect')->get();\n+        $booking=TicketData::with('Tikect')->get();\n \n         dd($booking);\n         return view('booking.index',compact('booking'));\n     }\n"
+                }
+            ],
+            "date": 1666398867021,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass BookingController extends Controller\n{\n    public function index()\n}\n"
+        }
+    ]
+}

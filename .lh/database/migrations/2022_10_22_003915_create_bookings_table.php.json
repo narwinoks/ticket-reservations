@@ -1,0 +1,42 @@
+{
+    "sourceFile": "database/migrations/2022_10_22_003915_create_bookings_table.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1666399172153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666399179633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     public function up()\n     {\n         Schema::create('bookings', function (Blueprint $table) {\n             $table->id();\n-            $table->fore\n+            $table->foreignIdFor(ti)\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666399187545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Models\\TicketData;\n use Illuminate\\Database\\Migrations\\Migration;\n use Illuminate\\Database\\Schema\\Blueprint;\n use Illuminate\\Support\\Facades\\Schema;\n \n@@ -14,9 +15,9 @@\n     public function up()\n     {\n         Schema::create('bookings', function (Blueprint $table) {\n             $table->id();\n-            $table->foreignIdFor(ti)\n+            $table->foreignIdFor(TicketData)\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666399192780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public function up()\n     {\n         Schema::create('bookings', function (Blueprint $table) {\n             $table->id();\n-            $table->foreignIdFor(TicketData)\n+            $table->foreignIdFor(TicketData::class);\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666399210013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,10 @@\n     {\n         Schema::create('bookings', function (Blueprint $table) {\n             $table->id();\n             $table->foreignIdFor(TicketData::class);\n+            $table->string('email');\n+            $table->String('name');\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666399224528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n             $table->id();\n             $table->foreignIdFor(TicketData::class);\n             $table->string('email');\n             $table->String('name');\n+            $table->s\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1666399233609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             $table->id();\n             $table->foreignIdFor(TicketData::class);\n             $table->string('email');\n             $table->String('name');\n-            $table->s\n+            $table->integer('status');\n             $table->timestamps();\n         });\n     }\n \n"
+                }
+            ],
+            "date": 1666399172153,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Database\\Migrations\\Migration;\nuse Illuminate\\Database\\Schema\\Blueprint;\nuse Illuminate\\Support\\Facades\\Schema;\n\nreturn new class extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return void\n     */\n    public function up()\n    {\n        Schema::create('bookings', function (Blueprint $table) {\n            $table->id();\n            $table->fore\n            $table->timestamps();\n        });\n    }\n\n    /**\n     * Reverse the migrations.\n     *\n     * @return void\n     */\n    public function down()\n    {\n        Schema::dropIfExists('bookings');\n    }\n};\n"
+        }
+    ]
+}

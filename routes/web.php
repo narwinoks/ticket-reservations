@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CheckinController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TicketsController;
@@ -29,6 +32,23 @@ Route::prefix('admin')->group(function(){
     Route::controller(HomeController::class)->group(function(){
         Route::get('home','index')->name('home');
     });
+    Route::controller(DashboardController::class)->group(function(){
+        Route::get('dashboard','index')->name('dashboard');
+    });
+    Route::controller(CheckinController::class)->group(function(){
+        Route::get('checkin','index')->name('checkin.index');
+    });
+    Route::controller(BookingController::class)->group(function(){
+        Route::prefix('booking')->group(function(){
+            Route::get('/','index')->name('booking.index');
+            Route::get('/{id}/edit','edit')->name('booking.edit');
+            Route::put('/update/{id}','update')->name('booking.update');
+            Route::delete('/destory/{id}','destroy')->name('booking.destroy');
+
+
+        });
+    });
+
     Route::resource('ticket',TicketsController::class);
 });
 

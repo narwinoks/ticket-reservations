@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/Http/Controllers/CheckinController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1666397826562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666397838227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n use Illuminate\\Http\\Request;\n \n class CheckinController extends Controller\n {\n-    public functiom\n+    public function index()\n }\n"
+                },
+                {
+                    "date": 1666398349714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,8 @@\n use Illuminate\\Http\\Request;\n \n class CheckinController extends Controller\n {\n-    public function index()\n+    public function index(){\n+        return view('checkin.index')\n+    }\n }\n"
+                }
+            ],
+            "date": 1666397826562,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass CheckinController extends Controller\n{\n    public functiom\n}\n"
+        }
+    ]
+}
