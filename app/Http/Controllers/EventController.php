@@ -8,6 +8,7 @@ use App\Models\Ticket;
 use App\Models\TicketData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use PDF;
 
 class EventController extends Controller
 {
@@ -26,7 +27,7 @@ class EventController extends Controller
         $validator=Validator::make($request->all(),
         [
             'name' => 'required|max:255',
-            'email' => 'required|unique:bookings|email',
+            'email' => 'required|email',
         ]);
         if ($validator->fails()) {
                  return redirect()->route('event.index')->with('danger',$validator->errors());
@@ -40,14 +41,16 @@ class EventController extends Controller
                     $tikeCode->update([
                         'available' => '0'
                     ]);
+                    // return $tikeCode->id;
                     $data=Booking::create([
                         'ticket_data_id' => $tikeCode->id,
                         'email' => $request->email,
                         'name' => $request->name,
                         'status' => '1'
                     ]);
+                    // return $data;
                     if ($data) {
-                        return redirect()->route('event.index')->with('success', 'Succesfully  Booking Tikets !!');
+                      return redirect()->route('buy.ticekt',$data->ticket_data_id)->with('success','Your Data Success');
                     }
                     return redirect()->route('event.index')->with('success', 'FAild Update Data !!');
                     
@@ -56,6 +59,23 @@ class EventController extends Controller
         }
 
     
+    }
+
+    public function generatePDF($id){
+        // return $id;
+         $data = [
+            'title' => 'Welcome to ItSolutionStuff.com',
+            'date' => date('m/d/Y')
+        ];
+        $event=TicketData::where('id','=',$id)->first();
+        $pdf = PDF::loadView('event.print', compact('event','data'));
+        return $pdf->download('winarno.pdf');
+    }
+    public function buy($id){
+        // return $data;
+        $event=TicketData::where('id','=',$id)->first();
+        return view('event.buy',compact('id','event'));
+
     }
 
 }

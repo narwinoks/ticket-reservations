@@ -59,6 +59,8 @@ Route::controller(HomeController::class)->group(function(){
 Route::controller(EventController::class)->group(function(){
     Route::get('event','index')->name('event.index');
     Route::post('event','store')->name('event.store');
+    Route::get('generate-pdf/{id}','generatePDF')->name('generate-pdf');
+    Route::get('buy-ticket/{id}','buy')->name('buy.ticekt');
     Route::get('event/{slug}','detail')->name('event.detail');
 });
 Route::prefix('data')->group(function(){

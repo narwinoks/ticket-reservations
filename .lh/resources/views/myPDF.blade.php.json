@@ -1,0 +1,22 @@
+{
+    "sourceFile": "resources/views/myPDF.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1666416406307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666420096732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n <head>\n     <title>Hi</title>\n </head>\n <body>\n-    <h1>{{ $title }}</h1>\n-    <p>{{ $date }}</p>\n+    {{-- <h1>{{ $title }}</h1>\n+    <p>{{ $date }}</p> --}}\n     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n"
+                }
+            ],
+            "date": 1666416406307,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Hi</title>\n</head>\n<body>\n    <h1>{{ $title }}</h1>\n    <p>{{ $date }}</p>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n</body>\n</html>"
+        }
+    ]
+}

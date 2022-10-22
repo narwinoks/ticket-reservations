@@ -3,12 +3,12 @@
 <div class="col-md-12 col-sm-12">
   @if (session()->has('success'))
     <div class="alert alert-fill-success" role="alert">
-      {{ session('success')}}
+      {{ session('success')}} . <a href="#" class="alert-link">link donwload</a>. 
     </div>
   @endif
   @if (session()->has('danger'))
     <div class="alert alert-fill-danger" role="alert">
-      {{ session('danger')}}
+      {{ session('danger')}} 
     </div>
   @endif
 </div>

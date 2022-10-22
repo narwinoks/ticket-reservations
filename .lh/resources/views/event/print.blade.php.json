@@ -1,0 +1,50 @@
+{
+    "sourceFile": "resources/views/event/print.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1666418925684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666418931568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n <html>\n <head>\n </head>\n <body>\n-    <p></p>\n+    <p>Your Code Is :{{  }}</p>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666418952234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n <html>\n <head>\n </head>\n <body>\n-    <p>Your Code Is :{{  }}</p>\n+    <p>Your Code Is :{{ $event->code }}</p>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666419819582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n <html>\n <head>\n </head>\n <body>\n-    <p>Your Code Is :{{ $event->code }}</p>\n+    <p>Your Code Is :{{ $event['code'] }}</p>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666419914569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,16 @@\n <!DOCTYPE html>\n <html>\n <head>\n+    <title>Hi</title>\n </head>\n <body>\n-    <p>Your Code Is :{{ $event['code'] }}</p>\n+    <h1>{{ $title }}</h1>\n+    <p>{{ $date }}</p>\n+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666419921253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n <head>\n     <title>Hi</title>\n </head>\n <body>\n-    <h1>{{ $title }}</h1>\n-    <p>{{ $date }}</p>\n+   \n     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n"
+                },
+                {
+                    "date": 1666420116092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n <head>\n     <title>Hi</title>\n </head>\n <body>\n-   \n+    {{-- <h1>{{ $title }}</h1>\n+    <p>{{ $date }}</p> --}}\n     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n"
+                },
+                {
+                    "date": 1666420140681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,7 @@\n <head>\n     <title>Hi</title>\n </head>\n <body>\n-    {{-- <h1>{{ $title }}</h1>\n-    <p>{{ $date }}</p> --}}\n-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n+   <p>T</p>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666420147286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n <head>\n     <title>Hi</title>\n </head>\n <body>\n-   <p>Your Code Is</p>\n+   <p>Your Code Is </p>\n </body>\n </html>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1666418925684,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n    <p></p>\n</body>\n</html>"
+        }
+    ]
+}
