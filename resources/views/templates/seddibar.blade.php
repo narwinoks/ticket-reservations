@@ -22,19 +22,19 @@
           <li class="nav-item nav-category">Master</li>
           <li class="nav-item">
             <a href="{{ route('ticket.index') }}" class="nav-link">
-              <i class="link-icon" data-feather="message-square"></i>
+              <i class="link-icon" data-feather="credit-card"></i>
               <span class="link-title">Tikets</span>
             </a>
           </li>
           <li class="nav-item nav-category">Data</li>
           <li class="nav-item">
             <a href="{{ route('checkin.index') }}" class="nav-link">
-              <i class="link-icon" data-feather="message-square"></i>
+              <i class="link-icon" data-feather="external-link"></i>
               <span class="link-title">Check in</span>
             </a>
           <li class="nav-item">
             <a href="{{ route('booking.index') }}" class="nav-link">
-              <i class="link-icon" data-feather="message-square"></i>
+              <i class="link-icon" data-feather="inbox"></i>
               <span class="link-title">Booking</span>
             </a>
         </ul>
