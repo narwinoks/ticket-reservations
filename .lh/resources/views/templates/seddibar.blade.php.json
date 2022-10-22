@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1666340975369,
@@ -24,6 +24,26 @@
                 {
                     "date": 1666397761962,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n             </a>\n           <li class=\"nav-item\">\n             <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n-              <span class=\"link-title\">Tikets</span>\n+              <span class=\"link-title\">Booking</span>\n             </a>\n         </ul>\n       </div>\n     </nav>\n"
+                },
+                {
+                    "date": 1666404728342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             </a>\n           </li>\n           <li class=\"nav-item nav-category\">Master</li>\n           <li class=\"nav-item\">\n-            <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n+            <a href=\"{{ route('dashboard') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Tikets</span>\n             </a>\n           </li>\n"
+                },
+                {
+                    "date": 1666404735085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             </a>\n           </li>\n           <li class=\"nav-item nav-category\">Master</li>\n           <li class=\"nav-item\">\n-            <a href=\"{{ route('dashboard') }}\" class=\"nav-link\">\n+            <a href=\"{{ route('ticket.index') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Tikets</span>\n             </a>\n           </li>\n"
+                },
+                {
+                    "date": 1666404743697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             </a>\n           </li>\n           <li class=\"nav-item nav-category\">Data</li>\n           <li class=\"nav-item\">\n-            <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n+            <a href=\"{{ route('') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Check in</span>\n             </a>\n           <li class=\"nav-item\">\n"
+                },
+                {
+                    "date": 1666404751957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,14 +27,14 @@\n             </a>\n           </li>\n           <li class=\"nav-item nav-category\">Data</li>\n           <li class=\"nav-item\">\n-            <a href=\"{{ route('') }}\" class=\"nav-link\">\n+            <a href=\"{{ route('dashboard') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Check in</span>\n             </a>\n           <li class=\"nav-item\">\n-            <a href=\"pages/apps/chat.html\" class=\"nav-link\">\n+            <a href=\"{{ route('dashboard') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Booking</span>\n             </a>\n         </ul>\n"
+                },
+                {
+                    "date": 1666404761521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Check in</span>\n             </a>\n           <li class=\"nav-item\">\n-            <a href=\"{{ route('dashboard') }}\" class=\"nav-link\">\n+            <a href=\"{{ route('booking.index') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Booking</span>\n             </a>\n         </ul>\n"
                 }
             ],
             "date": 1666340975369,

@@ -5,6 +5,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CheckinController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
@@ -29,8 +30,8 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('login', 'proscessLogin')->name('login');
 });
 Route::prefix('admin')->group(function(){
-    Route::controller(HomeController::class)->group(function(){
-        Route::get('home','index')->name('home');
+    Route::controller(DashboardController::class)->group(function () {
+    Route::get('dashboard', 'index')->name('dashboard');
     });
     Route::controller(DashboardController::class)->group(function(){
         Route::get('dashboard','index')->name('dashboard');
@@ -52,6 +53,12 @@ Route::prefix('admin')->group(function(){
     Route::resource('ticket',TicketsController::class);
 });
 
+Route::controller(HomeController::class)->group(function(){
+    Route::get('home','index')->name('home');
+});
+Route::controller(EventController::class)->group(function(){
+    Route::get('event','index')->name('event.index');
+});
 Route::prefix('data')->group(function(){
     Route::controller(DataController::class)->group(function(){
         Route::get('ticket','tickets')->name('ticket.data');

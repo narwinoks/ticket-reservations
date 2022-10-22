@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 15,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1666335884106,
@@ -68,6 +68,10 @@
                 {
                     "date": 1666339858184,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,7 @@\n         if (Auth::attempt($credentials)) {\n             // $request->session()->regenerate();\n             return redirect()->intended('/home');\n         }\n-\n         return back()->with('login erorr', 'Login Faild!');\n     }\n }\n"
+                },
+                {
+                    "date": 1666404670880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             'password' => ['required'],\n         ]);\n         if (Auth::attempt($credentials)) {\n             // $request->session()->regenerate();\n-            return redirect()->intended('/home');\n+            return redirect()->intended('/dashboard');\n         }\n         return back()->with('login erorr', 'Login Faild!');\n     }\n }\n"
                 }
             ],
             "date": 1666335884106,

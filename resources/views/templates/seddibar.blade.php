@@ -21,19 +21,19 @@
           </li>
           <li class="nav-item nav-category">Master</li>
           <li class="nav-item">
-            <a href="pages/apps/chat.html" class="nav-link">
+            <a href="{{ route('ticket.index') }}" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">Tikets</span>
             </a>
           </li>
           <li class="nav-item nav-category">Data</li>
           <li class="nav-item">
-            <a href="pages/apps/chat.html" class="nav-link">
+            <a href="{{ route('dashboard') }}" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">Check in</span>
             </a>
           <li class="nav-item">
-            <a href="pages/apps/chat.html" class="nav-link">
+            <a href="{{ route('booking.index') }}" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">Booking</span>
             </a>

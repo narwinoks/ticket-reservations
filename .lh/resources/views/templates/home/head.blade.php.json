@@ -1,0 +1,18 @@
+{
+    "sourceFile": "resources/views/templates/home/head.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1666405803279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1666405803279,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n\t<title>NobleUI Responsive Bootstrap 4 Dashboard Template</title>\n\t<!-- core:css -->\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/core/core.css') }}\">\n\t<!-- endinject -->\n  <!-- plugin css for this page -->\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}\">\n\t<!-- end plugin css for this page -->\n\t<!-- inject:css -->\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/fonts/feather-font/css/iconfont.css') }}\">\n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}\">\n\t<!-- endinject -->\n  <!-- Layout styles -->  \n\t<link rel=\"stylesheet\" href=\"{{ asset('assets/css/demo_5/style.css') }}\">\n  <!-- End layout styles -->\n  <link rel=\"shortcut icon\" href=\"{{ asset('assets/images/favicon.png') }}\" />\n</head>\n<body>\n\t<div class=\"main-wrapper\">"
+        }
+    ]
+}

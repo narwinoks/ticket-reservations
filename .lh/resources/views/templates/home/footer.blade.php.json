@@ -1,0 +1,18 @@
+{
+    "sourceFile": "resources/views/templates/home/footer.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1666405838684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1666405838684,
+            "name": "Commit-0",
+            "content": "   </div>\n\t\t\t</div>\n\n\t\t\t<!-- partial:partials/_footer.html -->\n\t\t\t<footer class=\"footer d-flex flex-column flex-md-row align-items-center justify-content-between\">\n\t\t\t\t<p class=\"text-muted text-center text-md-left\">Copyright © 2020 <a href=\"https://www.nobleui.com\" target=\"_blank\">NobleUI</a>. All rights reserved</p>\n\t\t\t\t<p class=\"text-muted text-center text-md-left mb-0 d-none d-md-block\">Handcrafted With <i class=\"mb-1 text-primary ml-1 icon-small\" data-feather=\"heart\"></i></p>\n\t\t\t</footer>\n\t\t\t<!-- partial -->\n\t\t\n\t\t</div>\n\t</div>\n\n\t<!-- core:js -->\n\t<script src=\"{{ asset('assets/vendors/core/core.js') }}\"></script>\n\t<!-- endinject -->\n  <!-- plugin js for this page -->\n  <script src=\"{{ asset('assets/vendors/chartjs/Chart.min.js') }}\"></script>\n  <script src=\"{{ asset('assets/vendors/jquery.flot/jquery.flot.js') }}\"></script>\n  <script src=\"{{ asset('assets/vendors/jquery.flot/jquery.flot.resize.js') }}\"></script>\n  <script src=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}\"></script>\n  <script src=\"{{ asset('assets/vendors/apexcharts/apexcharts.min.js') }}\"></script>\n  <script src=\"{{ asset('assets/vendors/progressbar.js/progressbar.min.js') }}\"></script>\n\t<!-- end plugin js for this page -->\n\t<!-- inject:js -->\n\t<script src=\"{{ asset('assets/vendors/feather-icons/feather.min.js') }}\"></script>\n\t<script src=\"{{ asset('assets/js/template.js') }}\"></script>\n\t<!-- endinject -->\n  <!-- custom js for this page -->\n  <script src=\"{{ asset('assets/js/dashboard.js') }}\"></script>\n  <script src=\"{{ asset('assets/js/datepicker.js') }}\"></script>\n\t<!-- end custom js for this page -->\n</body>\n</html>    "
+        }
+    ]
+}

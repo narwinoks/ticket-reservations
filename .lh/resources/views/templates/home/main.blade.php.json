@@ -1,0 +1,38 @@
+{
+    "sourceFile": "resources/views/templates/home/main.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1666405863878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1666405876019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n \n+@include('templates.home.')\n \t\t<div class=\"page-wrapper\">\n \n \t\t<div class=\"page-content\">\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666405881600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n \n-@include('templates.home.')\n+@include('templates.home.head')\n+@include('templates.home.footer')\n \t\t<div class=\"page-wrapper\">\n \n \t\t<div class=\"page-content\">\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666405888087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n \n @include('templates.home.head')\n+@include('templates.home.navbar')\n @include('templates.home.footer')\n \t\t<div class=\"page-wrapper\">\n \n \t\t<div class=\"page-content\">\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666405896595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \n @include('templates.home.head')\n @include('templates.home.navbar')\n-@include('templates.home.footer')\n-\t\t<div class=\"page-wrapper\">\n-\n-\t\t<div class=\"page-content\">\n\\ No newline at end of file\n+<div class=\"page-wrapper\">\n+    \n+    <div class=\"page-content\">\n+@include('templates.home.footer')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1666405905203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \n @include('templates.home.head')\n @include('templates.home.navbar')\n-<div class=\"page-wrapper\">\n-    \n+    <div class=\"page-wrapper\">\n     <div class=\"page-content\">\n+        @yield('content')\n @include('templates.home.footer')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1666405863878,
+            "name": "Commit-0",
+            "content": "\n\t\t<div class=\"page-wrapper\">\n\n\t\t<div class=\"page-content\">"
+        }
+    ]
+}
