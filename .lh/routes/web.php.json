@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 68,
+            "activePatchIndex": 69,
             "patches": [
                 {
                     "date": 1666337013291,
@@ -280,6 +280,10 @@
                 {
                     "date": 1666402477348,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n     });\n     Route::controller(BookingController::class)->group(function(){\n         Route::prefix('booking')->group(function(){\n             Route::get('/','index')->name('booking.index');\n-            Route::get('/{id}','edit')->name('booking.index');\n+            Route::get('/{id}/','edit')->name('booking.index');\n             Route::delete('/destory/{id}','destroy')->name('booking.destroy');\n \n \n         });\n"
+                },
+                {
+                    "date": 1666423090763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n \n-Route::mid controller(AuthController::class)->group(function(){\n+Route::middleware() controller(AuthController::class)->group(function(){\n     Route::get('login','login')->name('login');\n     Route::post('login', 'proscessLogin')->name('login');\n });\n Route::middleware('auth')-> prefix('admin')->group(function(){\n"
                 }
             ],
             "date": 1666337013291,

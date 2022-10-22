@@ -21,15 +21,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::controller(AuthController::class)->group(function(){
+Route::middleware('guest')->controller(AuthController::class)->group(function(){
     Route::get('login','login')->name('login');
     Route::post('login', 'proscessLogin')->name('login');
 });
-Route::prefix('admin')->group(function(){
+Route::middleware('auth')-> prefix('admin')->group(function(){
     Route::controller(DashboardController::class)->group(function () {
     Route::get('dashboard', 'index')->name('dashboard');
     });
@@ -38,6 +38,7 @@ Route::prefix('admin')->group(function(){
     });
     Route::controller(CheckinController::class)->group(function(){
         Route::get('checkin','index')->name('checkin.index');
+        Route::post('checkin/{id}','CheckIn')->name('checkin.post');
     });
     Route::controller(BookingController::class)->group(function(){
         Route::prefix('booking')->group(function(){
@@ -54,7 +55,7 @@ Route::prefix('admin')->group(function(){
 });
 
 Route::controller(HomeController::class)->group(function(){
-    Route::get('home','index')->name('home');
+    Route::get('/','index')->name('home');
 });
 Route::controller(EventController::class)->group(function(){
     Route::get('event','index')->name('event.index');
@@ -63,8 +64,8 @@ Route::controller(EventController::class)->group(function(){
     Route::get('buy-ticket/{id}','buy')->name('buy.ticekt');
     Route::get('event/{slug}','detail')->name('event.detail');
 });
-Route::prefix('data')->group(function(){
-    Route::controller(DataController::class)->group(function(){
-        Route::get('ticket','tickets')->name('ticket.data');
-    });
-});
+// Route::prefix('data')->group(function(){
+//     Route::controller(DataController::class)->group(function(){
+//         Route::get('ticket','tickets')->name('ticket.data');
+//     });
+// });

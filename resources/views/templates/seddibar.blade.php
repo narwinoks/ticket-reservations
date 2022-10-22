@@ -28,7 +28,7 @@
           </li>
           <li class="nav-item nav-category">Data</li>
           <li class="nav-item">
-            <a href="{{ route('dashboard') }}" class="nav-link">
+            <a href="{{ route('checkin.index') }}" class="nav-link">
               <i class="link-icon" data-feather="message-square"></i>
               <span class="link-title">Check in</span>
             </a>

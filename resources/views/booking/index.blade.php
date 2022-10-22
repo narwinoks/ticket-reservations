@@ -1,12 +1,5 @@
 @extends('templates.main')
 @section('content')
-<div class="col-md-12 col-sm-12">
-  @if (session()->has('success'))
-    <div class="alert alert-fill-success" role="alert">
-      {{ session('success')}}
-    </div>
-  @endif
-</div>
   <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
