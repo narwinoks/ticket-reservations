@@ -12,7 +12,7 @@
               @endif
          <div class="card-body">
             <h3 class="h3 title">{{ $event->name }}</h3>
-            <p class="mt-3"><span>{{ $event->location }}</span></p>
+            <p class="mt-3">Event In <span>{{ $event->location }}</span></p>
             <hr>
             <h4 class="bold heading-title"><span class="badge badge-pill badge-primary">
             Highlight:  
@@ -33,7 +33,7 @@
          <div class="card-footer border-0">
             <div class="text-right">
               @if (count($event->TiketData) > 0)
-              <button class="btn btn-success bnt-sm" data-toggle="modal" data-target=".bd-example-modal-xl">Buy</button>                  
+              <button class="btn btn-success bnt-sm" data-toggle="modal" data-target=".bd-example-modal-xl">Select Tickets</button>                  
               @endif
             </div>
          </div>
@@ -63,7 +63,7 @@
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
                                 <label for="name">Reservation Name</label>
-                                        <input type="text" class="form-control mb-2  @error('name') is-invalid @enderror" placeholder="narnowin195@gmail.com" name="name" autocomplete="off" placeholder="1 Year Together Kangen Band" value="{{ old('name')}}">
+                                        <input type="text" class="form-control mb-2  @error('name') is-invalid @enderror" name="name" autocomplete="off"  placeholder="narnowin195@gmail.com" value="{{ old('name')}}">
                                         @error('name')
                                              <div class="invalid-feedback">{{ $message }}</div>
                                          @enderror
@@ -72,7 +72,7 @@
                         <div class="col-md-6 col-sm-12">
                               <div class="form-group">
                                   <label for="email">Reservation Email</label>
-                                    <input type="text" class="form-control mb-2  @error('email') is-invalid @enderror" placeholder="winarno" name="email"  autocomplete="off" placeholder="1 Year Together Kangen Band" value="{{ old('email') }}">
+                                    <input type="text" class="form-control mb-2  @error('email') is-invalid @enderror"name="email"  placeholder="narnowin195@gmail.com"  autocomplete="off" value="{{ old('email') }}">
                                         @error('email')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
@@ -88,7 +88,7 @@
                         </div>
                              <div class="row mt-5">
                                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                <button class="btn btn-light">Cancel</button>
+                                <button type="reset" class="btn btn-light">Cancel</button>
                           </div>
                   </form>
                 </div>

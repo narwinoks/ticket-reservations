@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('image')->nullable();
             $table->double('price');
-            $table->String('highlight')->nullable();
+            $table->text('highlight')->nullable();
             $table->String('location');
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->date('event_date');
             $table->time('event_time')->nullable();
             $table->timestamp('open_at')->nullable();
