@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1666340913823,
@@ -20,6 +20,10 @@
                 {
                     "date": 1666346439833,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \t<!-- core:css -->\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/core/core.css') }}\">\n \t<!-- endinject -->\n   <!-- plugin css for this page -->\n-  {{-- <link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}\"> --}}\n+  <link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}\">\n \t<!-- end plugin css for this page -->\n \t<!-- inject:css -->\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/fonts/feather-font/css/iconfont.css') }}\">\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}\">\n"
+                },
+                {
+                    "date": 1666424711269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n <head>\n \t<meta charset=\"UTF-8\">\n \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n \t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n-\t<title>NobleUI Responsive Bootstrap 4 Dashboard Template</title>\n+\t<title>Note</title>\n \t<!-- core:css -->\n \t<link rel=\"stylesheet\" href=\"{{ asset('assets/vendors/core/core.css') }}\">\n \t<!-- endinject -->\n   <!-- plugin css for this page -->\n"
                 }
             ],
             "date": 1666340913823,
