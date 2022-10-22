@@ -2,7 +2,7 @@
 	<nav class="sidebar">
       <div class="sidebar-header">
         <a href="#" class="sidebar-brand">
-          Noble<span>UI</span>
+          Gent<span>X</span>
         </a>
         <div class="sidebar-toggler not-active">
           <span></span>

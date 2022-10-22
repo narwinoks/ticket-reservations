@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1666405814122,
@@ -20,6 +20,18 @@
                 {
                     "date": 1666406012200,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,18 +6,8 @@\n \t\t\t\t\t<div class=\"navbar-content\">\n \t\t\t\t\t\t<a href=\"#\" class=\"navbar-brand\">\n \t\t\t\t\t\t\tNoble<span>UI</span>\n \t\t\t\t\t\t</a>\n-\t\t\t\t\t\t<form class=\"search-form\">\n-\t\t\t\t\t\t\t<div class=\"input-group\">\n-\t\t\t\t\t\t\t\t<div class=\"input-group-prepend\">\n-\t\t\t\t\t\t\t\t\t<div class=\"input-group-text\">\n-\t\t\t\t\t\t\t\t\t\t<i data-feather=\"search\"></i>\n-\t\t\t\t\t\t\t\t\t</div>\n-\t\t\t\t\t\t\t\t</div>\n-\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control\" id=\"navbarForm\" placeholder=\"Search here...\">\n-\t\t\t\t\t\t\t</div>\n-\t\t\t\t\t\t</form>\n \t\t\t\t\t\t<button class=\"navbar-toggler navbar-toggler-right d-lg-none align-self-center\" type=\"button\" data-toggle=\"horizontal-menu-toggle\">\n \t\t\t\t\t\t\t<i data-feather=\"menu\"></i>\t\t\t\t\t\n \t\t\t\t\t\t</button>\n \t\t\t\t\t</div>\n"
+                },
+                {
+                    "date": 1666424120152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \t\t\t<nav class=\"navbar top-navbar\">\n \t\t\t\t<div class=\"container\">\n \t\t\t\t\t<div class=\"navbar-content\">\n \t\t\t\t\t\t<a href=\"#\" class=\"navbar-brand\">\n-\t\t\t\t\t\t\tNoble<span>UI</span>\n+\t\t\t\t\t\t\tGent<span>UI</span>\n \t\t\t\t\t\t</a>\n \t\t\t\t\t\t<button class=\"navbar-toggler navbar-toggler-right d-lg-none align-self-center\" type=\"button\" data-toggle=\"horizontal-menu-toggle\">\n \t\t\t\t\t\t\t<i data-feather=\"menu\"></i>\t\t\t\t\t\n \t\t\t\t\t\t</button>\n"
+                },
+                {
+                    "date": 1666424276442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \t\t\t<nav class=\"navbar top-navbar\">\n \t\t\t\t<div class=\"container\">\n \t\t\t\t\t<div class=\"navbar-content\">\n \t\t\t\t\t\t<a href=\"#\" class=\"navbar-brand\">\n-\t\t\t\t\t\t\tGent<span>UI</span>\n+\t\t\t\t\t\t\tGent<span>X</span>\n \t\t\t\t\t\t</a>\n \t\t\t\t\t\t<button class=\"navbar-toggler navbar-toggler-right d-lg-none align-self-center\" type=\"button\" data-toggle=\"horizontal-menu-toggle\">\n \t\t\t\t\t\t\t<i data-feather=\"menu\"></i>\t\t\t\t\t\n \t\t\t\t\t\t</button>\n@@ -23,9 +23,9 @@\n \t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t</li>\n \t\t\t\t\t\t<li class=\"nav-item\">\n \t\t\t\t\t\t<li class=\"nav-item\">\n-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"dashboard-one.html\">\n+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{ route('') }}\">\n \t\t\t\t\t\t\t\t<i class=\"link-icon\" data-feather=\"box\"></i>\n \t\t\t\t\t\t\t\t<span class=\"menu-title\">Event</span>\n \t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t</li>\n"
+                },
+                {
+                    "date": 1666424317390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,16 +16,16 @@\n \t\t\t<nav class=\"bottom-navbar\">\n \t\t\t\t<div class=\"container\">\n \t\t\t\t\t<ul class=\"nav page-navigation\">\n \t\t\t\t\t\t<li class=\"nav-item\">\n-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"dashboard-one.html\">\n+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{ route('home') }}\">\n \t\t\t\t\t\t\t\t<i class=\"link-icon\" data-feather=\"box\"></i>\n \t\t\t\t\t\t\t\t<span class=\"menu-title\">Dashboard</span>\n \t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t</li>\n \t\t\t\t\t\t<li class=\"nav-item\">\n \t\t\t\t\t\t<li class=\"nav-item\">\n-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{ route('') }}\">\n+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{ route('event.index') }}\">\n \t\t\t\t\t\t\t\t<i class=\"link-icon\" data-feather=\"box\"></i>\n \t\t\t\t\t\t\t\t<span class=\"menu-title\">Event</span>\n \t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t</li>\n"
                 }
             ],
             "date": 1666405814122,

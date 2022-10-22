@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-md-8 pl-md-0">
                   <div class="auth-form-wrapper px-4 py-5">
-                    <a href="#" class="noble-ui-logo d-block mb-2">Noble<span>UI</span></a>
+                    <a href="#" class="noble-ui-logo d-block mb-2">Gen<span>X</span></a>
                     <h5 class="text-muted font-weight-normal mb-4">Welcome back! Log in to your account.</h5>
                     <form class="forms-sample" method="POST" action="{{ route('login') }}">
                       @method("POST")
@@ -39,7 +39,6 @@
                       <div class="mt-3">
                         <button  type="submit" class="btn btn-primary mr-2 mb-2 mb-md-0 text-white">Login</button>
                       </div>
-                      <a href="register.html" class="d-block mt-3 text-muted">Not a user? Sign up</a>
                     </form>
                   </div>
                 </div>

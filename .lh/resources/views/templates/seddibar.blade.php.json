@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 13,
             "patches": [
                 {
                     "date": 1666340975369,
@@ -48,6 +48,18 @@
                 {
                     "date": 1666422661300,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n             </a>\n           </li>\n           <li class=\"nav-item nav-category\">Data</li>\n           <li class=\"nav-item\">\n-            <a href=\"{{ route('dashboard') }}\" class=\"nav-link\">\n+            <a href=\"{{ route('checkin.index') }}\" class=\"nav-link\">\n               <i class=\"link-icon\" data-feather=\"message-square\"></i>\n               <span class=\"link-title\">Check in</span>\n             </a>\n           <li class=\"nav-item\">\n"
+                },
+                {
+                    "date": 1666424107277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \t\t<!-- partial:partials/_sidebar.html -->\n \t<nav class=\"sidebar\">\n       <div class=\"sidebar-header\">\n         <a href=\"#\" class=\"sidebar-brand\">\n-          Noble<span>UI</span>\n+          Agen<span>UI</span>\n         </a>\n         <div class=\"sidebar-toggler not-active\">\n           <span></span>\n           <span></span>\n"
+                },
+                {
+                    "date": 1666424112688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \t\t<!-- partial:partials/_sidebar.html -->\n \t<nav class=\"sidebar\">\n       <div class=\"sidebar-header\">\n         <a href=\"#\" class=\"sidebar-brand\">\n-          Agen<span>UI</span>\n+          Agent<span>X</span>\n         </a>\n         <div class=\"sidebar-toggler not-active\">\n           <span></span>\n           <span></span>\n"
+                },
+                {
+                    "date": 1666424214988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \t\t<!-- partial:partials/_sidebar.html -->\n \t<nav class=\"sidebar\">\n       <div class=\"sidebar-header\">\n         <a href=\"#\" class=\"sidebar-brand\">\n-          Agent<span>X</span>\n+          ent<span>X</span>\n         </a>\n         <div class=\"sidebar-toggler not-active\">\n           <span></span>\n           <span></span>\n"
                 }
             ],
             "date": 1666340975369,

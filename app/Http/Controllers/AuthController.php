@@ -18,8 +18,18 @@ class AuthController extends Controller
         ]);
         if (Auth::attempt($credentials)) {
             // $request->session()->regenerate();
-            return redirect()->intended('/dashboard');
+            return redirect()->route('dashboard');
         }
         return back()->with('login erorr', 'Login Faild!');
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

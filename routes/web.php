@@ -29,6 +29,7 @@ Route::middleware('guest')->controller(AuthController::class)->group(function(){
     Route::get('login','login')->name('login');
     Route::post('login', 'proscessLogin')->name('login');
 });
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware('auth')-> prefix('admin')->group(function(){
     Route::controller(DashboardController::class)->group(function () {
     Route::get('dashboard', 'index')->name('dashboard');
