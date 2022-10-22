@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1666340975369,
@@ -60,6 +60,18 @@
                 {
                     "date": 1666424214988,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \t\t<!-- partial:partials/_sidebar.html -->\n \t<nav class=\"sidebar\">\n       <div class=\"sidebar-header\">\n         <a href=\"#\" class=\"sidebar-brand\">\n-          Agent<span>X</span>\n+          ent<span>X</span>\n         </a>\n         <div class=\"sidebar-toggler not-active\">\n           <span></span>\n           <span></span>\n"
+                },
+                {
+                    "date": 1666425538421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \t\t<!-- partial:partials/_sidebar.html -->\n \t<nav class=\"sidebar\">\n       <div class=\"sidebar-header\">\n         <a href=\"#\" class=\"sidebar-brand\">\n-          ent<span>X</span>\n+          Gent<span>X</span>\n         </a>\n         <div class=\"sidebar-toggler not-active\">\n           <span></span>\n           <span></span>\n@@ -21,9 +21,9 @@\n           </li>\n           <li class=\"nav-item nav-category\">Master</li>\n           <li class=\"nav-item\">\n             <a href=\"{{ route('ticket.index') }}\" class=\"nav-link\">\n-              <i class=\"link-icon\" data-feather=\"message-square\"></i>\n+              <i class=\"link-icon\" data-feather=\"credit-card\"></i>\n               <span class=\"link-title\">Tikets</span>\n             </a>\n           </li>\n           <li class=\"nav-item nav-category\">Data</li>\n"
+                },
+                {
+                    "date": 1666425592247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n           </li>\n           <li class=\"nav-item nav-category\">Data</li>\n           <li class=\"nav-item\">\n             <a href=\"{{ route('checkin.index') }}\" class=\"nav-link\">\n-              <i class=\"link-icon\" data-feather=\"message-square\"></i>\n+              <i class=\"link-icon\" data-feather=\"external-link\"></i>\n               <span class=\"link-title\">Check in</span>\n             </a>\n           <li class=\"nav-item\">\n             <a href=\"{{ route('booking.index') }}\" class=\"nav-link\">\n"
+                },
+                {
+                    "date": 1666425613239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n               <span class=\"link-title\">Check in</span>\n             </a>\n           <li class=\"nav-item\">\n             <a href=\"{{ route('booking.index') }}\" class=\"nav-link\">\n-              <i class=\"link-icon\" data-feather=\"message-square\"></i>\n+              <i class=\"link-icon\" data-feather=\"inbox\"></i>\n               <span class=\"link-title\">Booking</span>\n             </a>\n         </ul>\n       </div>\n"
                 }
             ],
             "date": 1666340975369,
